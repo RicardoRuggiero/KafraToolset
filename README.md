@@ -1,4 +1,3 @@
-<img width="1873" height="905" alt="image" src="https://github.com/user-attachments/assets/72cd9e8d-9db1-4c18-b3f8-52536f3de902" />
 
 ============================================================================
 # KafraToolset - Backend API
@@ -112,5 +111,19 @@ As rotas podem ser testadas via:
 ✔ Autenticação JWT  
 ✔ Upload de imagens  
 ✔ Tratamento de erros  
+
+============================================================================
+
+## 🌐 Deploy
+
+A aplicação foi implantada na plataforma Render.
+<img width="1873" height="905" alt="image" src="https://github.com/user-attachments/assets/72cd9e8d-9db1-4c18-b3f8-52536f3de902" />
+URL da API:
+https://kafratoolset.onrender.com
+
+Observações:
+- O serviço pode entrar em modo de inatividade (plano free), podendo demorar alguns segundos para responder
+- As variáveis de ambiente (DATABASE_URL, JWT_SECRET) foram configuradas no ambiente do Render
+- O backend está localizado na pasta /backend do repositório
 
 ============================================================================
