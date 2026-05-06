@@ -1,0 +1,83 @@
+# =========================
+# Node modules
+# =========================
+node_modules/
+
+# =========================
+# Build / TypeScript
+# =========================
+dist/
+build/
+*.tsbuildinfo
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.local
+.env.development
+.env.production
+
+# =========================
+# Logs
+# =========================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/*
+!.vscode/extensions.json
+
+.idea/
+
+# =========================
+# Coverage / testing
+# =========================
+coverage/
+
+# =========================
+# Temporary files
+# =========================
+tmp/
+temp/
+.cache/
+
+# =========================
+# React build
+# =========================
+frontend/build/
+frontend/node_modules/
+
+# =========================
+# Backend build
+# =========================
+backend/dist/
+backend/node_modules/
+
+# =========================
+# Data / Cache
+# =========================
+jsondivinepride/
+
+# =========================
+# estudos
+# =========================
+caderno_erbrios.txt
+caderno_erbrios.md
+cadernetaEstudos.md
+
+# =========================
+# Uploads
+# =========================
+uploads/

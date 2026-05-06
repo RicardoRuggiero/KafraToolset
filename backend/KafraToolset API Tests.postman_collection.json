@@ -1,0 +1,621 @@
+{
+  "info": {
+    "_postman_id": "a21b977f-f77d-4e7c-9033-993ca587efb2",
+    "name": "KafraToolset API Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48998814",
+    "_collection_link": "https://go.postman.co/collection/48998814-a21b977f-f77d-4e7c-9033-993ca587efb2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Login adm",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"adm@email.com\",\r\n  \"senha\": \"123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"2@email.com\",\r\n  \"senha\": \"123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login 3",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"3@email.com\",\r\n  \"senha\": \"123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cadastro 4",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"4@email.com\",\r\n  \"senha\": \"456\",\r\n  \"secret\": \"32f0r342FRNidjme0w3DFJI9\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "NPC - CRIA",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1AZW1haWwuY29tIiwiaWF0IjoxNzc3OTIzODMxLCJleHAiOjE3Nzc5Mjc0MzF9.5hrz9g-BT1eIh7g7b4cBsy0veURbGaT54--tTILzrMQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 2,\r\n  \"name\": \"teste NPC\",\r\n  \"mapname\": \"Mapa de Teste\",\r\n  \"x\": 420,\r\n  \"y\": 520,\r\n  \"job\": 100,\r\n  \"type\": \"npc_shop_test\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/npcs",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "npcs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ITEM - CRIA",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1AZW1haWwuY29tIiwiaWF0IjoxNzc3OTM3MjI0LCJleHAiOjE3Nzc5NDA4MjR9.Capkzdz1nirzalDLD2hEXKF49zvbnZNtz4GbBo6XN4o",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "id",
+              "value": "10",
+              "description": "10",
+              "type": "text",
+              "uuid": "67222440-3dcf-43e5-aa9a-52d80f4f1f34"
+            },
+            {
+              "key": "name",
+              "value": "espadaTeste",
+              "type": "text",
+              "uuid": "5a731e97-c6f1-4996-b68f-a3a6e2d20fa0"
+            },
+            {
+              "key": "weight",
+              "value": "0",
+              "type": "text",
+              "uuid": "6aa8f0e5-ff56-4031-aaab-a19b1147285e"
+            },
+            {
+              "key": "description",
+              "value": "teste imagem",
+              "type": "text",
+              "uuid": "cd1da8e0-7673-447a-a693-afc2a317cd90"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "4ca67c05-81d2-4ce2-953f-441f00eee56a",
+              "src": "/C:/Users/Usuario/Desktop/r-0/1-Pasta/imagens/gatoBlackL.png"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/items",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "items"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SoldBy - CRIA",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1AZW1haWwuY29tIiwiaWF0IjoxNzc3OTE4ODI4LCJleHAiOjE3Nzc5MjI0Mjh9.fV-ZW080Om-CF0WMYg0Nb-1-f7lwmS9ULGTIikdSrh8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"itemId\": 1,\r\n  \"npcId\": 1,\r\n  \"price\": 100\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/soldby",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "soldby"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "NPC - BUSCA1",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1AZW1haWwuY29tIiwiaWF0IjoxNzc3OTE4ODI4LCJleHAiOjE3Nzc5MjI0Mjh9.fV-ZW080Om-CF0WMYg0Nb-1-f7lwmS9ULGTIikdSrh8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/npcs/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "npcs",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "NPC - BUSCA",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1AZW1haWwuY29tIiwiaWF0IjoxNzc3OTE4ODI4LCJleHAiOjE3Nzc5MjI0Mjh9.fV-ZW080Om-CF0WMYg0Nb-1-f7lwmS9ULGTIikdSrh8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/npcs",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "npcs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ITEM - BUSCA1",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1AZW1haWwuY29tIiwiaWF0IjoxNzc3OTM4MjE0LCJleHAiOjE3Nzc5NDE4MTR9.stsEnVwiFyxXWvc0rKg_aMo7hyg2Pt7KH-zL54N0qtk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/items/10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "items",
+            "10"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ITEM - BUSCA",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1AZW1haWwuY29tIiwiaWF0IjoxNzc3OTE4ODI4LCJleHAiOjE3Nzc5MjI0Mjh9.fV-ZW080Om-CF0WMYg0Nb-1-f7lwmS9ULGTIikdSrh8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/items",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "items"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "NPC - ALTERA",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1AZW1haWwuY29tIiwiaWF0IjoxNzc3OTIzMzU5LCJleHAiOjE3Nzc5MjY5NTl9.CXum1K-tfBBhgOLQmgQ_y7WiIpz7tMRCJXeMbxQhPsc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"teste_NPCalterado\",\r\n  \"mapname\": \"Babilonia\",\r\n  \"x\": 421,\r\n  \"y\": 419\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/npcs/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "npcs",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ITEM - ALTERA",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1AZW1haWwuY29tIiwiaWF0IjoxNzc3OTIzMzU5LCJleHAiOjE3Nzc5MjY5NTl9.CXum1K-tfBBhgOLQmgQ_y7WiIpz7tMRCJXeMbxQhPsc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Teste_KafraNPCalterado\",\r\n  \"description\": \"vou modificar\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/items/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "items",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ITEM - DEL",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1AZW1haWwuY29tIiwiaWF0IjoxNzc3OTIzODMxLCJleHAiOjE3Nzc5Mjc0MzF9.5hrz9g-BT1eIh7g7b4cBsy0veURbGaT54--tTILzrMQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/items/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "items",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "NPC - DEL",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1AZW1haWwuY29tIiwiaWF0IjoxNzc3OTIzODMxLCJleHAiOjE3Nzc5Mjc0MzF9.5hrz9g-BT1eIh7g7b4cBsy0veURbGaT54--tTILzrMQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/npcs/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "npcs",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TESTE - 404",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1AZW1haWwuY29tIiwiaWF0IjoxNzc3OTI0MjM5LCJleHAiOjE3Nzc5Mjc4Mzl9.PviyRKrFQxTgGWSeA-tweEmMuiizJtqzqYW9txRYIhY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/items/999999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "items",
+            "999999"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TESTE - 401",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/items",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "items"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
