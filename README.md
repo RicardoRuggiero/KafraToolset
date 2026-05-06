@@ -108,7 +108,9 @@ As rotas podem ser testadas via:
 
 A aplicação foi implantada na plataforma Render.<br>
 <br>
-<img width="1873" height="905" alt="image" src="https://github.com/user-attachments/assets/72cd9e8d-9db1-4c18-b3f8-52536f3de902" /><br><br>
+<img width="1873" height="905" alt="image" src="https://github.com/user-attachments/assets/72cd9e8d-9db1-4c18-b3f8-52536f3de902" />
+<img width="349" height="205" alt="image" src="https://github.com/user-attachments/assets/8733f41a-cab4-4b7f-b32a-296b86fd51b7" />
+<br><br>
 URL da API:
 <br>
 https://kafratoolset.onrender.com
