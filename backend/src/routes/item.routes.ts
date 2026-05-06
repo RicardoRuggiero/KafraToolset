@@ -12,15 +12,15 @@
 
 import { Router } from "express"
 import * as controller from "../controllers/item.controller"
-// import { validateItem } from "../middlewares/validation.middleware"
-import { authMiddleware } from "../middlewares/auth.middleware"
-import { upload } from "../middlewares/upload.middleware";
+// import { validateItem } from "../middlewares/validation.middleware" // PODE DAR CONFLITO DE BIBLIOTECA
+import { authMiddleware } from "../middlewares/auth.middleware" // CHECK
+import { upload } from "../middlewares/upload.middleware"; // BINÁRIO
 
 const router = Router()
 // FREE
 router.get("/", controller.getAll)
 router.get("/:id", controller.getById)
-// CHECK PASS LOGIN
+// CONTROLE
 router.post("/", authMiddleware, upload.single("image"), controller.create)
 router.put("/:id", authMiddleware, controller.update)
 router.delete("/:id", authMiddleware, controller.remove)

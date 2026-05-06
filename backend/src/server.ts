@@ -36,11 +36,13 @@ app.use("/api/auth", authRoutes)
 app.use("/api/items", itemRoutes)
 app.use("/api/npcs", npcRoutes)
 app.use("/api/soldby", soldbyRoutes)
-
+// Confirmar rotas do render
 app.get("/kafratoolset", (req, res) => {
   res.json({ message: "KafraToolset" })
 })
-
+app.get("/", (req, res) => {
+  res.json({ message: "API KafraToolset online" })
+})
 // TRATAMENTO DE ERRO
 app.use(errorHandler)
 
