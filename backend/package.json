@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "start": "node dist/server.js",
     "dev": "ts-node-dev --respawn src/server.ts",
     "sync": "ts-node src/createTables.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
