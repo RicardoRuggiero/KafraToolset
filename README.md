@@ -26,6 +26,7 @@ Permite gerenciamento de itens, NPCs e suas relações de venda.
 - JWT (Autenticação)
 - Multer (Upload de imagens)
 - Bcrypt (Hash de senha)
+- Render (Web Service)
 
 ============================================================================
 
@@ -105,12 +106,12 @@ As rotas podem ser testadas via:
 ============================================================================
 
 ## ✨ Status do Projeto
-✔ CRUD completo  
-✔ Validação implementada  
-✔ Relacionamentos funcionando  
-✔ Autenticação JWT  
-✔ Upload de imagens  
-✔ Tratamento de erros  
+✔ CRUD completo
+✔ Validação implementada
+✔ Relacionamentos funcionando
+✔ Autenticação JWT
+✔ Upload de imagens
+✔ Tratamento de erros
 
 ============================================================================
 
@@ -122,8 +123,14 @@ URL da API:
 https://kafratoolset.onrender.com
 
 Observações:
-- O serviço pode entrar em modo de inatividade (plano free), podendo demorar alguns segundos para responder
-- As variáveis de ambiente (DATABASE_URL, JWT_SECRET) foram configuradas no ambiente do Render
-- O backend está localizado na pasta /backend do repositório
+- O serviço pode entrar em modo de inatividade (plano free), podendo demorar alguns segundos para responder.
+- As variáveis de ambiente (DATABASE_URL, JWT_SECRET) foram configuradas no ambiente do Render.
+- O backend está localizado na pasta /backend do repositório.
 
+Para Build e Execução:
+- Build: npm install && npm run build
+- Start: npm start
+- Endpoint de teste: <br>
+  GET /kafratoolset <br>
+  
 ============================================================================
