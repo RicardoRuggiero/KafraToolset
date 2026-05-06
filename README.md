@@ -96,30 +96,21 @@ Servidor:<br>
 As rotas podem ser testadas via:
 - Thunder Client (VSCode)
 - Postman
+  
 
-============================================================================
- 
 <img width="311" height="719" alt="image" src="https://github.com/user-attachments/assets/195b82f2-e19c-42c0-91fe-4c9617b4e4d9" />
 
 <img width="879" height="547" alt="image" src="https://github.com/user-attachments/assets/81888407-2f2c-4552-923f-421429ead62d" />
  
 ============================================================================
 
-## ✨ Status do Projeto
-✔ CRUD completo
-✔ Validação implementada
-✔ Relacionamentos funcionando
-✔ Autenticação JWT
-✔ Upload de imagens
-✔ Tratamento de erros
-
-============================================================================
-
 ## 🌐 Deploy
 
-A aplicação foi implantada na plataforma Render.
-<img width="1873" height="905" alt="image" src="https://github.com/user-attachments/assets/72cd9e8d-9db1-4c18-b3f8-52536f3de902" />
+A aplicação foi implantada na plataforma Render.<br>
+<br>
+<img width="1873" height="905" alt="image" src="https://github.com/user-attachments/assets/72cd9e8d-9db1-4c18-b3f8-52536f3de902" /><br><br>
 URL da API:
+<br>
 https://kafratoolset.onrender.com
 
 Observações:
@@ -134,3 +125,6 @@ Para Build e Execução:
   GET /kafratoolset <br>
   
 ============================================================================
+
+(๑•̀ㅂ•́)و✧ (∩^o^)⊃━☆ ˎˊ˗ˎˊ˗ˎˊ˗ˎˊ˗ˎˊ
+⋆𖦹˚｡⋆°˚🦕𓂃ִֶָ🪽་༘࿐..
