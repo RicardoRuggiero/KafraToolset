@@ -2,18 +2,34 @@
 ============================================================================
 # KafraToolset - Backend API
 
-Aluno: Ricardo <br>
-Disciplina: Fullstack  <br>
-Professor: Luis <br>
-
+Aluno: Ricardo 
+<br>
+Disciplina: Fullstack 
+<br>
+Professor: Luis
+<br>
 Banco de Dados usado:
 https://supabase.com
 
 ============================================================================
 
 ## ➡️ Descrição
-API RESTful, CRUD;
-Permite gerenciamento de itens, NPCs e suas relações de venda.
+
+API RESTful, CRUD<br>
+-endpoints organizados por recurso <br>
+-uso correto dos verbos HTTP<br>
+-respostas JSON<br>
+-status codes apropriados<br>
+<br>
+Permite gerenciamento de itens, NPCs e suas relações de venda.<br><br>
+"um NPC vende vários itens,
+um item pode ser vendido por vários NPCs"
+<br>
+"Soldby = price,
+Item 1---N Soldby N---1 NPC"
+<br>
+“O JWT funciona como identidade do usuário.
+Depois do login, o cliente recebe um token assinado digitalmente.”
 
 ============================================================================
 
@@ -111,6 +127,9 @@ A aplicação foi implantada na plataforma Render.<br>
 <img width="1873" height="905" alt="image" src="https://github.com/user-attachments/assets/72cd9e8d-9db1-4c18-b3f8-52536f3de902" />
 <br>
 <img width="349" height="205" alt="image" src="https://github.com/user-attachments/assets/8733f41a-cab4-4b7f-b32a-296b86fd51b7" />
+<br>
+<img width="1262" height="704" alt="image" src="https://github.com/user-attachments/assets/890fdb23-c7d0-4be6-a61e-3a298243ff13" />
+<br>
 <br><br>
 URL da API:
 <br>
