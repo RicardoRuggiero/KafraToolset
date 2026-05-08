@@ -3,7 +3,7 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Responsável por receber requisições HTTP de autenticação e delegar ao service.
+// Receber requisições HTTP de autenticação e delegar ao service.
 //
 // File: auth.controller.ts
 // Purpose: Endpoint para login de usuários.

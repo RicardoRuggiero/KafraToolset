@@ -17,9 +17,9 @@ https://supabase.com
 
 API RESTful, CRUD<br>
 -endpoints organizados por recurso <br>
--uso correto dos verbos HTTP<br>
+-uso de verbos HTTP<br>
 -respostas JSON<br>
--status codes apropriados<br>
+-status codes<br>
 <br>
 Permite gerenciamento de itens, NPCs e suas relações de venda.<br><br>
 "um NPC vende vários itens,
@@ -49,14 +49,23 @@ Depois do login, o cliente recebe um token assinado digitalmente.”
 ## ➡️ Funcionalidades
 - CRUD de Items
 - CRUD de NPCs
-- Relacionamento: Item ↔ NPC = (SoldBy)
+- Relacionamento Item & NPC = (SoldBy)
 - Validação de dados (middleware)
 - Persistência em banco de dados
 - Autenticação com JWT
 - Hash de senha com bcrypt
 - Upload de imagens (items)
 - Proteção de rotas com middleware
-- Tratamento global de erros
+- Tratamento global de erros<br>
+
+&
+### Veja Também:
+- Arquitetura
+- Fluxo das requisições
+- Segurança
+- Persistência
+- Regras de negócio
+- Deploy
 
 ============================================================================
 

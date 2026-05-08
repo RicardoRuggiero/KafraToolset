@@ -3,7 +3,7 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Responsável por receber requisições HTTP e delegar as ações ao service.
+// Recebe requisições HTTP e delega as ações ao service.
 //
 // File: item.controller.ts
 // Purpose: Endpoints CRUD de items.
