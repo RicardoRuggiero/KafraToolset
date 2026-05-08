@@ -3,11 +3,11 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Inicialização do servidor Express e conexão com banco.
-// Configura middlewares, rotas e start da aplicação.
+// Inicialização do servidor Express e conexão com banco
+// Configura middlewares, rotas e start da aplicação
 //
 // File: server.ts
-// Purpose: Entry point da API REST.
+// Purpose: Entry point da API REST
 // ============================================================================
 
 import express from "express"

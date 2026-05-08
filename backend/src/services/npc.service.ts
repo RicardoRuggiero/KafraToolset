@@ -3,10 +3,10 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Funções exportadas da service para a controller.
+// Funções Exportadas da Service para a Controller
 //
 // File: npc.service.ts
-// Purpose: CRUD de NPC.
+// Purpose: Executar operações CRUD na entidade NPC
 // ============================================================================
 
 import { AppDataSource } from "../database/data-source"

@@ -3,7 +3,7 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Lógica de criação e acesso ao banco
+// Criação e Acesso ao banco
 //
 // File: login.service.ts
 // Purpose: Serviço de autenticação de usuários.

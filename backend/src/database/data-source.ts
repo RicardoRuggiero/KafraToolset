@@ -3,11 +3,11 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Carrega .env → configura TypeORM → conecta no Postgres → registra entidades
-// (Item, Npc, Soldby)
+// Carrega .env, Configura TypeORM, 
+// Conecta no Postgres, Registra entidades
 //
 // File: data-source.ts
-// Purpose: Ponte entre o ambiente Node.js e o banco de dados Postgres/Supabase.
+// Purpose: Ponte-> Node.js || DB Postgres/Supabase
 // ============================================================================
 
 import "reflect-metadata"
@@ -22,8 +22,7 @@ dotenv.config()
 if (!process.env.DATABASE_URL) {
   throw new Error("DATABASE_URL não definida")
 }
-// CONTROLE INTELIGENTE DO SYNCHRONIZE
-// Use no .env: DB_SYNC=true || DB_SYNC=false
+
 const isSyncEnabled = process.env.DB_SYNC === "true"
 
 export const AppDataSource = new DataSource({

@@ -3,13 +3,13 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Middleware de Upload de Arquivos (Multer)
-// - Armazenar imagens no servidor (pasta uploads)
-// - Gerar nome único para arquivos
-// - Validar tipo de arquivo (imagem)
+// Upload de Arquivos (Multer)
+// Asrmazenar imagens no servidor
+// Gerar nome único para arquivos
+// Validar tipo de arquivo (imagem)
 //
 // File: upload.middleware.ts
-// Purpose: Gerenciar upload de imagens via multipart/form-data.
+// Purpose: Gerenciar upload de imagens via multipart/form-data
 // ============================================================================
 
 import multer from "multer";

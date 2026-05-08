@@ -3,11 +3,10 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Serviço de Items.
-// Contém a lógica de negócio e acesso ao banco de dados via TypeORM.
+// lógica de negócio e Acesso ao DB via TypeORM
 //
 // File: item.service.ts
-// Purpose: Executar operações CRUD na entidade Item.
+// Purpose: Executar operações CRUD na entidade Item
 // ============================================================================
 
 import { AppDataSource } from "../database/data-source"

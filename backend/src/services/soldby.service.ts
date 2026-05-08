@@ -3,10 +3,10 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Contém a lógica de negócio da relação entre Item e NPC.
+// Lógica de negócio da relação entre item & npc
 //
 // File: soldby.service.ts
-// Purpose: Gerenciar vendas de itens por NPCs com regras de negócio.
+// Purpose: Gerenciar vendas de item por npc com regras de negócio
 // ============================================================================
 
 import { AppDataSource } from "../database/data-source"

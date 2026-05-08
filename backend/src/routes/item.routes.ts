@@ -3,11 +3,10 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Rotas de Items.
-// Define os endpoints e conecta com o controller.
+// Define os endpoints e conecta com o controller
 //
 // File: item.routes.ts
-// Purpose: Mapear rotas REST para operações de items.
+// Purpose: Mapear rotas REST para operações de items
 // ============================================================================
 
 import { Router } from "express"
@@ -17,7 +16,7 @@ import { authMiddleware } from "../middlewares/auth.middleware" // CHECK
 import { upload } from "../middlewares/upload.middleware"; // BINÁRIO
 
 const router = Router()
-// FREE
+// LIVRE
 router.get("/", controller.getAll)
 router.get("/:id", controller.getById)
 // CONTROLE

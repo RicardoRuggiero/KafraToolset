@@ -3,10 +3,10 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Recebe requisições HTTP e delega as ações ao service.
+// Recebe requisições HTTP e delega as ações ao service
 //
 // File: npc.controller.ts
-// Purpose: Endpoints CRUD de NPC.
+// Purpose: Endpoints CRUD de NPC
 // ============================================================================
 
 import { Request, Response, NextFunction } from "express"

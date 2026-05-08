@@ -3,10 +3,10 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Recebe requisições HTTP e delega as ações ao service.
+// Recebe requisições HTTP e delega as ações ao service
 //
 // File: item.controller.ts
-// Purpose: Endpoints CRUD de items.
+// Purpose: Endpoints CRUD de items
 // ============================================================================
 
 import { Request, Response, NextFunction } from "express"

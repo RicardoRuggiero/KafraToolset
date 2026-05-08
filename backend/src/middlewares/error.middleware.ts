@@ -3,12 +3,12 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// GLOBAL Error Middleware
+// GLOBAL e multer(upload imagens)
 // 400 = (Bad Request)
 // 500 =(Internal Server Error)
 //
 // File: error.middleware.ts
-// Purpose: Validar dados.
+// Purpose: Validar dados
 // ============================================================================
 
 import { Request, Response, NextFunction } from "express"

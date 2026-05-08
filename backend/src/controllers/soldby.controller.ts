@@ -3,10 +3,10 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Recebe requisições HTTP e delega as ações ao service.
+// Recebe requisições HTTP e delega as ações ao service
 //
 // File: soldby.controller.ts
-// Purpose: Endpoints para gerenciar relação Item & NPC.
+// Purpose: Endpoints para gerenciar relação Item & NPC
 // ============================================================================
 
 import { Request, Response, NextFunction } from "express"

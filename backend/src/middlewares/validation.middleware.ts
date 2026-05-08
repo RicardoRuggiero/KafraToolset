@@ -3,10 +3,10 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Middleware de validação de dados em ROTAS EXCLUSIVAS.
+// Validação diretamente nas rotas
 //
 // File: validation.middleware.ts
-// Purpose: Validar dados.
+// Purpose: Validar dados
 // ============================================================================
 
 import { Request, Response, NextFunction } from "express"

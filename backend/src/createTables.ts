@@ -8,10 +8,10 @@
 //
 // Ao iniciar o AppDataSource, o TypeORM cria ou atualiza automaticamente
 // as tabelas com base nas entidades registradas, dependendo da flag
-// `synchronize` definida no data-source.
+// `synchronize` definida no data-source
 //
 // File: createTables.ts
-// Purpose: Criar e sincronizar a estrutura das tabelas no banco de dados.
+// Purpose: Criar e sincronizar a estrutura das tabelas no banco de dados
 // ============================================================================
 
 import { AppDataSource } from "./database/data-source";

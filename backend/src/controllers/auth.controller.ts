@@ -3,10 +3,10 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Receber requisições HTTP de autenticação e delegar ao service.
+// Receber requisições HTTP de autenticação e delegar ao service
 //
 // File: auth.controller.ts
-// Purpose: Endpoint para login de usuários.
+// Purpose: Endpoint para login de usuários
 // ============================================================================
 
 import { Request, Response, NextFunction } from "express";

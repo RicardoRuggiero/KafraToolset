@@ -3,15 +3,14 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Define a entidade intermediária Soldby.
-// Responsável por representar a relação entre Item e NPC,
-// incluindo informações adicionais como o preço de venda.
-//
+// Define a entidade intermediária Soldby
+// Responsável por representar a relação entre item e npc,
+// incluindo informações adicionais como o PREÇO(price)
 // Implementa relacionamento Many-to-One com Item e NPC,
-// caracterizando uma relação Many-to-Many com atributos.
+// caracterizando uma relação Many-to-Many com atributos
 //
 // File: soldby.ts
-// Purpose: Gerenciar a associação entre itens e NPCs com dados de venda.
+// Purpose: Gerenciar a associação entre itens e NPCs com dados de venda
 // ============================================================================
 
 import { Entity, Column, ManyToOne, PrimaryGeneratedColumn } from "typeorm";

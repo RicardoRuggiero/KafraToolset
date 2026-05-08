@@ -3,10 +3,10 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Middleware de Autenticação
+// Autenticação JWT
 //
 // File: auth.middleware.ts
-// Purpose: Validar o JWT nas rotas protegidas.
+// Purpose: Validar o JWT nas rotas protegidas
 // ============================================================================
 
 import { Request, Response, NextFunction } from "express";

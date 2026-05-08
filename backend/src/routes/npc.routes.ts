@@ -2,10 +2,11 @@
 // KafraToolset - DatabaseRO
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
-// Rotas de NPC.
+//
+// Define os endpoints e conecta com o controller
 //
 // File: npc.routes.ts
-// Purpose: Mapear endpoints de NPC.
+// Purpose: Mapear endpoints de NPC
 // ============================================================================
 
 import { Router } from "express"
@@ -14,10 +15,10 @@ import { validateNpc } from "../middlewares/validation.middleware"
 import { authMiddleware } from "../middlewares/auth.middleware"
 
 const router = Router()
-// FREE
+// LIVRE
 router.get("/", controller.getAll)
 router.get("/:id", controller.getById)
-// CHECK PASS LOGIN
+// CONTROLE
 router.post("/", authMiddleware, validateNpc, controller.create)
 router.put("/:id", authMiddleware, validateNpc, controller.update)
 router.delete("/:id", authMiddleware, controller.remove)

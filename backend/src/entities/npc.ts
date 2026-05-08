@@ -3,12 +3,10 @@
 // ============================================================================
 // Copyright (c) 2026 Ricardo RO - EOS
 //
-// Define a entidade NPC (Non-Player Character) do sistema.
-// Representa personagens do jogo responsáveis por interações como venda
-// de itens, posicionamento em mapas e identificação no mundo.
+// Define a estrutura da tabela NPC utilizando decoradores do TypeORM
 //
 // File: npc.ts
-// Purpose: Gerenciar dados estruturados de NPCs e suas relações com itens.
+// Purpose: Gerenciar dados estruturados de NPCs e suas relações com itens
 // ============================================================================
 
 import { Entity, PrimaryColumn, Column, OneToMany } from "typeorm";
