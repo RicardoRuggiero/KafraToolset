@@ -70,7 +70,7 @@ Depois do login, o cliente recebe um token assinado digitalmente.”
 ============================================================================
 
 ## ➡️ Fluxo da Aplicação
-JSON → TypeORM → Banco de Dados → API REST → CRUD
+...
 
 ============================================================================
 
