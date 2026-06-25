@@ -1,0 +1,111 @@
+
+/* ===========================================================
+   FUNDO DA APLICAÇÃO (tela inteira)
+   =========================================================== */
+body {
+  min-height: 100vh;
+
+  /* Fundo em degradê */
+  background:
+    linear-gradient(
+      to bottom,
+      #dff4ff 0%,
+      #b8e6ff 35%,
+      #8fd3ff 100%
+    );
+
+  background-image: url("/wallhaven-pojvw9.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+
+  font-family:
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+}
+
+/* ===========================================================
+   CARD TRANSPARENTE (caixa central das páginas)
+   =========================================================== */
+.frutiger-card {
+
+  /* Transparência do card */
+  background: rgba(126, 219, 255, 0.11);
+
+  /* Efeito vidro */
+  backdrop-filter: blur(8px);
+
+  /* Borda */
+  border: 1px solid rgba(255,255,255,0.9);
+
+  /* Cantos arredondados */
+  border-radius: 20px;
+
+  /* Sombra */
+  box-shadow:
+    0 8px 25px rgba(0,80,160,0.15);
+}
+
+/* ===========================================================
+   TÍTULOS
+   =========================================================== */
+.frutiger-title {
+
+  /* Cor do título */
+  color: #20c96cd7;
+
+  /* Brilho */
+  text-shadow:
+    0 2px 0 white,
+    0 18px 5px rgba(120,176,228,0.664);
+}
+
+/* ===========================================================
+   BOTÕES
+   =========================================================== */
+.frutiger-btn {
+
+  /* Cor do botão */
+  background:
+    linear-gradient(
+      to bottom,
+      #a0dfface,
+      #48aaffc9
+    );
+
+  /* Borda */
+  border: 0.5px solid #4c9cff;
+
+  /* COR DO TEXTO DO BOTÃO */
+  color: rgb(0, 0, 0) !important;
+
+  font-weight: 600;
+
+  border-radius: 12px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.8),
+    0 3px 8px rgba(0,0,0,.15);
+
+  transition: .2s;
+}
+
+/* ===========================================================
+   BOTÃO AO PASSAR O MOUSE
+   =========================================================== */
+.frutiger-btn:hover {
+
+  transform: translateY(-1px);
+
+  background:
+    linear-gradient(
+      to bottom,
+      #b8ecff,
+      #5db4ff
+    );
+}

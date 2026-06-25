@@ -14,16 +14,44 @@ export const npcService = {
   },
 
   create: async (npc: Npc) => {
-  const token = localStorage.getItem("token");
-  const response = await api.post(
-    "/npcs",
-    npc,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-  return response.data;
-},
+    const token = localStorage.getItem("token");
+    const response = await api.post(
+      "/npcs",
+      npc,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    return response.data;
+  },
+
+  update: async (id: number, npc: Npc) => {
+    const token = localStorage.getItem("token");
+    const response = await api.put(
+      `/npcs/${id}`,
+      npc,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    return response.data;
+  },
+
+  delete: async (id: number) => {
+    const token = localStorage.getItem("token");
+    await api.delete(
+      `/npcs/${id}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+  },
 };

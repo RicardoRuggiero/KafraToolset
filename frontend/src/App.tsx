@@ -1,18 +1,18 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/home/HomePage";
 
-import RegisterPage from "./pages/RegisterPage";
-import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/user/RegisterPage";
+import LoginPage from "./pages/user/LoginPage";
 
-import ItemListPage from "./pages/ItemListPage";
-import ItemCreatePage from "./pages/ItemCreatePage";
+import ItemListPage from "./pages/item/ItemListPage";
+import ItemCreatePage from "./pages/item/ItemCreatePage";
+import ItemEditPage from "./pages/item/ItemEditPage";
 
-import NpcListPage from "./pages/NpcListPage";
-import NpcCreatePage from "./pages/NpcCreatePage";
-
-
+import NpcListPage from "./pages/npc/NpcListPage";
+import NpcCreatePage from "./pages/npc/NpcCreatePage";
+import NpcEditPage from "./pages/npc/NpcEditPage";
 
 function App() {
   return (
@@ -23,8 +23,10 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/items" element={<ItemListPage />} />
         <Route path="/items/new" element={<ItemCreatePage />} />
+        <Route path="/items/edit/:id" element={<ItemEditPage />} />
         <Route path="/npcs" element={<NpcListPage />} />
         <Route path="/npcs/new" element={<NpcCreatePage />} />
+        <Route path="/npcs/edit/:id" element={<NpcEditPage />} />
       </Routes>
     </BrowserRouter>
   );
