@@ -53,21 +53,21 @@ function ItemCreatePage() {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-4 frutiger-page">
       <HomeButton />
-      <div className="container mt-4">
-        <h2>Cadastro de Item</h2>
+      <div className="container mt-4 frutiger-page">
+        <h2 className="frutiger-subtitle">Cadastro de Item</h2>
 
         <form onSubmit={handleSubmit}>
 
           <div className="mb-3">
-            <label className="form-label">
+            <label className="form-label frutiger-label">
               ID
             </label>
 
             <input
               type="number"
-              className="form-control"
+              className="form-control frutiger-input"
               value={id}
               onChange={(e) =>
                 setId(e.target.value)
@@ -76,12 +76,12 @@ function ItemCreatePage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">
+            <label className="form-label frutiger-label">
               Nome
             </label>
 
             <input
-              className="form-control"
+              className="form-control frutiger-input"
               value={name}
               onChange={(e) =>
                 setName(e.target.value)
@@ -90,12 +90,12 @@ function ItemCreatePage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">
+            <label className="form-label frutiger-label">
               Descrição
             </label>
 
             <textarea
-              className="form-control"
+              className="form-control frutiger-input"
               value={description}
               onChange={(e) =>
                 setDescription(e.target.value)
@@ -104,13 +104,13 @@ function ItemCreatePage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">
+            <label className="form-label frutiger-label">
               Peso
             </label>
 
             <input
               type="number"
-              className="form-control"
+              className="form-control frutiger-input"
               value={weight}
               onChange={(e) =>
                 setWeight(e.target.value)
@@ -119,13 +119,13 @@ function ItemCreatePage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">
+            <label className="form-label frutiger-label">
               Imagem
             </label>
 
             <input
               type="file"
-              className="form-control"
+              className="form-control frutiger-input"
               onChange={(e) => {
                 if (e.target.files?.length) {
                   setImage(
@@ -138,7 +138,7 @@ function ItemCreatePage() {
 
           <button
             type="submit"
-            className="btn btn-primary"
+            className="btn frutiger-btn"
           >
             Salvar
           </button>

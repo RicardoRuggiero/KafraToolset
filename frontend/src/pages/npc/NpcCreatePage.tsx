@@ -69,17 +69,17 @@ function NpcCreatePage() {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-4 frutiger-page">
       <HomeButton />
-      <div className="container mt-4">
-        <h2>Cadastro de NPC</h2>
+      <div className="container mt-4 frutiger-page">
+        <h2 className="frutiger-subtitle">Cadastro de NPC</h2>
 
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label className="form-label">ID</label>
+            <label className="form-label frutiger-label">ID</label>
             <input
               type="number"
-              className="form-control"
+              className="form-control frutiger-input"
               value={id}
               onChange={(e) =>
                 setId(e.target.value)
@@ -88,9 +88,9 @@ function NpcCreatePage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Nome</label>
+            <label className="form-label frutiger-label">Nome</label>
             <input
-              className="form-control"
+              className="form-control frutiger-input"
               value={name}
               onChange={(e) =>
                 setName(e.target.value)
@@ -99,9 +99,9 @@ function NpcCreatePage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Mapname</label>
+            <label className="form-label frutiger-label">Mapname</label>
             <input
-              className="form-control"
+              className="form-control frutiger-input"
               value={mapname}
               onChange={(e) =>
                 setMapname(e.target.value)
@@ -110,10 +110,10 @@ function NpcCreatePage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">X</label>
+            <label className="form-label frutiger-label">X</label>
             <input
               type="number"
-              className="form-control"
+              className="form-control frutiger-input"
               value={x}
               onChange={(e) =>
                 setX(e.target.value)
@@ -122,10 +122,10 @@ function NpcCreatePage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Y</label>
+            <label className="form-label frutiger-label">Y</label>
             <input
               type="number"
-              className="form-control"
+              className="form-control frutiger-input"
               value={y}
               onChange={(e) =>
                 setY(e.target.value)
@@ -134,10 +134,10 @@ function NpcCreatePage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Job</label>
+            <label className="form-label frutiger-label">Job</label>
             <input
               type="number"
-              className="form-control"
+              className="form-control frutiger-input"
               value={job}
               onChange={(e) =>
                 setJob(e.target.value)
@@ -146,9 +146,9 @@ function NpcCreatePage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Type</label>
+            <label className="form-label frutiger-label">Type</label>
             <input
-              className="form-control"
+              className="form-control frutiger-input"
               value={type}
               onChange={(e) =>
                 setType(e.target.value)
@@ -158,7 +158,7 @@ function NpcCreatePage() {
 
           <button
             type="submit"
-            className="btn btn-primary"
+            className="btn frutiger-btn"
           >
             Salvar
           </button>

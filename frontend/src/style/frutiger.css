@@ -10,14 +10,22 @@ body {
     linear-gradient(
       to bottom,
       #dff4ff 0%,
-      #b8e6ff 35%,
-      #8fd3ff 100%
+      #b8ffde 35%,
+      #70fdc2 100%
     );
+
+  /* Imagem de fundo opcional.
+     Para usar:
+     1. coloque a imagem em public/wallhaven-pojvw9.jpg
+     2. descomente estas linhas
+     3. comente o background em degradê acima
 
   background-image: url("/wallhaven-pojvw9.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  */
 
   background-attachment: fixed;
 
@@ -30,47 +38,86 @@ body {
 }
 
 /* ===========================================================
-   CARD TRANSPARENTE (caixa central das páginas)
+   CAIXA PRINCIPAL DAS PÁGINAS
+   Use em: forms, listas, login, cadastro
    =========================================================== */
-.frutiger-card {
+.frutiger-page {
+  background: rgba(15, 50, 80, 0.18);
 
-  /* Transparência do card */
-  background: rgba(126, 219, 255, 0.11);
-
-  /* Efeito vidro */
   backdrop-filter: blur(8px);
 
-  /* Borda */
-  border: 1px solid rgba(255,255,255,0.9);
+  border: 1px solid rgba(255, 255, 255, 0.55);
 
-  /* Cantos arredondados */
   border-radius: 20px;
 
-  /* Sombra */
+  padding: 25px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 80, 160, 0.18);
+}
+
+/* ===========================================================
+   CARD TRANSPARENTE DA HOME
+   =========================================================== */
+.frutiger-card {
+  background: rgba(126, 219, 255, 0.11);
+
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,255,255,0.9);
+
+  border-radius: 20px;
+
   box-shadow:
     0 8px 25px rgba(0,80,160,0.15);
 }
 
 /* ===========================================================
-   TÍTULOS
+   CARD ESCURO TRANSPARENTE
+   Use se quiser uma área mais contrastada
+   =========================================================== */
+.frutiger-card-dark {
+  background: rgba(15, 35, 60, 0.32);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  border-radius: 20px;
+
+  color: white;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* ===========================================================
+   TÍTULOS PRINCIPAIS
    =========================================================== */
 .frutiger-title {
-
-  /* Cor do título */
   color: #20c96cd7;
 
-  /* Brilho */
   text-shadow:
     0 2px 0 white,
     0 18px 5px rgba(120,176,228,0.664);
 }
 
 /* ===========================================================
-   BOTÕES
+   SUBTÍTULOS / H2 DAS PÁGINAS
+   =========================================================== */
+.frutiger-subtitle {
+  color: #063b5c;
+
+  font-weight: 700;
+
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.8);
+}
+
+/* ===========================================================
+   BOTÕES DO TEMA
    =========================================================== */
 .frutiger-btn {
-
-  /* Cor do botão */
   background:
     linear-gradient(
       to bottom,
@@ -78,10 +125,8 @@ body {
       #48aaffc9
     );
 
-  /* Borda */
   border: 0.5px solid #4c9cff;
 
-  /* COR DO TEXTO DO BOTÃO */
   color: rgb(0, 0, 0) !important;
 
   font-weight: 600;
@@ -96,10 +141,9 @@ body {
 }
 
 /* ===========================================================
-   BOTÃO AO PASSAR O MOUSE
+   BOTÕES DO TEMA AO PASSAR O MOUSE
    =========================================================== */
 .frutiger-btn:hover {
-
   transform: translateY(-1px);
 
   background:
@@ -108,4 +152,93 @@ body {
       #b8ecff,
       #5db4ff
     );
+}
+
+/* ===========================================================
+   CAMPOS DE FORMULÁRIO
+   Use junto com form-control:
+   className="form-control frutiger-input"
+   =========================================================== */
+.frutiger-input {
+  background: rgba(255, 255, 255, 0.45);
+
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  color: #102030;
+
+  border-radius: 12px;
+
+  box-shadow:
+    inset 0 1px 4px rgba(255,255,255,0.65);
+}
+
+/* ===========================================================
+   CAMPOS DE FORMULÁRIO AO CLICAR
+   =========================================================== */
+.frutiger-input:focus {
+  background: rgba(255, 255, 255, 0.65);
+
+  border-color: #4da6ff;
+
+  box-shadow:
+    0 0 10px rgba(80,180,255,.6);
+
+  color: #102030;
+}
+
+/* ===========================================================
+   LABEL DOS FORMULÁRIOS
+   =========================================================== */
+.frutiger-label {
+  color: #063b5c;
+
+  font-weight: 600;
+
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.8);
+}
+
+/* ===========================================================
+   TABELAS
+   Use junto com table:
+   className="table frutiger-table"
+   =========================================================== */
+.frutiger-table {
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* ===========================================================
+   CABEÇALHO DA TABELA
+   =========================================================== */
+.frutiger-table thead th {
+  background: rgba(30, 120, 190, 0.78);
+
+  color: white;
+
+  border-color: rgba(255,255,255,0.35);
+}
+
+/* ===========================================================
+   CÉLULAS DA TABELA
+   =========================================================== */
+.frutiger-table tbody td {
+  background: rgba(255, 255, 255, 0.45);
+
+  color: #102030;
+
+  border-color: rgba(255,255,255,0.35);
+}
+
+/* ===========================================================
+   LINHA DA TABELA AO PASSAR O MOUSE
+   =========================================================== */
+.frutiger-table tbody tr:hover td {
+  background: rgba(190, 235, 255, 0.65);
 }

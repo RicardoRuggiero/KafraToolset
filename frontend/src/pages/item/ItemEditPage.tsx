@@ -56,20 +56,20 @@ function ItemEditPage() {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-4 frutiger-page">
       <HomeButton />
-      <div className="container mt-4">
-        <h2>Editar Item</h2>
+      <div className="container mt-4 frutiger-page">
+        <h2 className="frutiger-subtitle">Editar Item</h2>
 
         <form onSubmit={handleSubmit}>
 
           <div className="mb-3">
-            <label className="form-label">
+            <label className="form-label frutiger-label">
               Nome
             </label>
 
             <input
-              className="form-control"
+              className="form-control frutiger-input"
               value={name}
               onChange={(e) =>
                 setName(e.target.value)
@@ -78,12 +78,12 @@ function ItemEditPage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">
+            <label className="form-label frutiger-label">
               Descrição
             </label>
 
             <textarea
-              className="form-control"
+              className="form-control frutiger-input"
               value={description}
               onChange={(e) =>
                 setDescription(e.target.value)
@@ -92,13 +92,13 @@ function ItemEditPage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">
+            <label className="form-label frutiger-label">
               Peso
             </label>
 
             <input
               type="number"
-              className="form-control"
+              className="form-control frutiger-input"
               value={weight}
               onChange={(e) =>
                 setWeight(e.target.value)
@@ -108,7 +108,7 @@ function ItemEditPage() {
 
           <button
             type="submit"
-            className="btn btn-warning"
+            className="btn frutiger-btn"
           >
             Atualizar
           </button>

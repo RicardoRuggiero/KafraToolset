@@ -36,21 +36,21 @@ function LoginPage() {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-4 frutiger-page">
       <HomeButton />
 
-      <div className="container mt-4">
-        <h2>Login</h2>
+      <div className="container mt-4 frutiger-page">
+        <h2 className="frutiger-subtitle">Login</h2>
 
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label className="form-label">
+            <label className="form-label frutiger-label">
               Email
             </label>
 
             <input
               type="email"
-              className="form-control"
+              className="form-control frutiger-input"
               value={email}
               onChange={(e) =>
                 setEmail(e.target.value)
@@ -59,13 +59,13 @@ function LoginPage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">
+            <label className="form-label frutiger-label">
               Senha
             </label>
 
             <input
               type="password"
-              className="form-control"
+              className="form-control frutiger-input"
               value={senha}
               onChange={(e) =>
                 setSenha(e.target.value)
@@ -75,7 +75,7 @@ function LoginPage() {
 
           <button
             type="submit"
-            className="btn btn-primary"
+            className="btn frutiger-btn"
           >
             Entrar
           </button>

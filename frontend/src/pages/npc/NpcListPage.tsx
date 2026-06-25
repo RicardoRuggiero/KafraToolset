@@ -31,12 +31,12 @@ function NpcListPage() {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-4 frutiger-page">
       <HomeButton />
-      <div className="container mt-4">
-        <h2>NPCs</h2>
+      <div className="container mt-4 frutiger-page">
+        <h2 className="frutiger-subtitle">NPCs</h2>
 
-        <table className="table table-striped">
+        <table className="table frutiger-table">
           <thead>
             <tr>
               <th>ID</th>

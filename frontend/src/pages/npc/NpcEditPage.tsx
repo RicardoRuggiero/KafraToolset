@@ -72,70 +72,70 @@ function NpcEditPage() {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-4 frutiger-page">
       <HomeButton />
-      <div className="container mt-4">
-        <h2>Editar NPC</h2>
+      <div className="container mt-4 frutiger-page">
+        <h2 className="frutiger-subtitle">Editar NPC</h2>
 
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label className="form-label">Nome</label>
+            <label className="form-label frutiger-label">Nome</label>
             <input
-              className="form-control"
+              className="form-control frutiger-input"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Mapname</label>
+            <label className="form-label frutiger-label">Mapname</label>
             <input
-              className="form-control"
+              className="form-control frutiger-input"
               value={mapname}
               onChange={(e) => setMapname(e.target.value)}
             />
           </div>
 
           <div className="mb-3">
-            <label className="form-label">X</label>
+            <label className="form-label frutiger-label">X</label>
             <input
               type="number"
-              className="form-control"
+              className="form-control frutiger-input"
               value={x}
               onChange={(e) => setX(e.target.value)}
             />
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Y</label>
+            <label className="form-label frutiger-label">Y</label>
             <input
               type="number"
-              className="form-control"
+              className="form-control frutiger-input"
               value={y}
               onChange={(e) => setY(e.target.value)}
             />
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Job</label>
+            <label className="form-label frutiger-label">Job</label>
             <input
               type="number"
-              className="form-control"
+              className="form-control frutiger-input"
               value={job}
               onChange={(e) => setJob(e.target.value)}
             />
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Type</label>
+            <label className="form-label frutiger-label">Type</label>
             <input
-              className="form-control"
+              className="form-control frutiger-input"
               value={type}
               onChange={(e) => setType(e.target.value)}
             />
           </div>
 
-          <button type="submit" className="btn btn-warning">
+          <button type="submit" className="btn frutiger-btn">
             Atualizar
           </button>
         </form>

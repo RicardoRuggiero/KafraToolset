@@ -42,22 +42,22 @@ function RegisterPage() {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-4 frutiger-page">
       <HomeButton />
 
-      <h2>Itens</h2>
-      <div className="container mt-4">
+      <h2 className="frutiger-subtitle">Itens</h2>
+      <div className="container mt-4 frutiger-page">
         <h2>Cadastro de Usuário</h2>
 
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label className="form-label">
+            <label className="form-label frutiger-label">
               Email
             </label>
 
             <input
               type="email"
-              className="form-control"
+              className="form-control frutiger-input"
               value={email}
               onChange={(e) =>
                 setEmail(e.target.value)
@@ -66,13 +66,13 @@ function RegisterPage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">
+            <label className="form-label frutiger-label">
               Senha
             </label>
 
             <input
               type="password"
-              className="form-control"
+              className="form-control frutiger-input"
               value={senha}
               onChange={(e) =>
                 setSenha(e.target.value)
@@ -81,12 +81,12 @@ function RegisterPage() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">
+            <label className="form-label frutiger-label">
               Secret
             </label>
 
             <input
-              className="form-control"
+              className="form-control frutiger-input"
               value={secret}
               onChange={(e) =>
                 setSecret(e.target.value)
@@ -96,7 +96,7 @@ function RegisterPage() {
 
           <button
             type="submit"
-            className="btn btn-primary"
+            className="btn frutiger-btn"
           >
             Cadastrar
           </button>
