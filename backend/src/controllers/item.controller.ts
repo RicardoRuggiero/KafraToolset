@@ -51,13 +51,30 @@ export async function create(req: Request, res: Response, next: NextFunction) {
   }
 }
 
-export async function update(req: Request, res: Response, next: NextFunction) {
+export async function update(
+  req: Request,
+  res: Response,
+  next: NextFunction
+) {
   try {
-    const id = Number(req.params.id)
-    const item = await itemService.update(id, req.body)
-    res.json(item)
+    const id = Number(req.params.id);
+    const data = req.body;
+    if (req.file) {
+      data.imageUrl =
+        `/uploads/${req.file.filename}`;
+    }
+    if (data.weight !== undefined) {
+      data.weight =
+        Number(data.weight);
+    }
+    const item =
+      await itemService.update(
+        id,
+        data
+      );
+    res.json(item);
   } catch (err) {
-    next(err)
+    next(err);
   }
 }
 

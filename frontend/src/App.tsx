@@ -14,6 +14,8 @@ import NpcListPage from "./pages/npc/NpcListPage";
 import NpcCreatePage from "./pages/npc/NpcCreatePage";
 import NpcEditPage from "./pages/npc/NpcEditPage";
 
+import SoldbyCreatePage from "./pages/soldby/SoldbyCreatePage";
+
 function App() {
   return (
     <BrowserRouter>
@@ -27,6 +29,7 @@ function App() {
         <Route path="/npcs" element={<NpcListPage />} />
         <Route path="/npcs/new" element={<NpcCreatePage />} />
         <Route path="/npcs/edit/:id" element={<NpcEditPage />} />
+        <Route path="/soldby/new" element={<SoldbyCreatePage />} />
       </Routes>
     </BrowserRouter>
   );

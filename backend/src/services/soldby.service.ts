@@ -45,7 +45,7 @@ export async function create(data: { itemId: number, npcId: number, price: numbe
     throw { status: 400, message: "NPC já vende este item" }
   }
 
-  // cria 
+  // CRIAR
   const sold = repo.create({
     price: data.price,
     item,
@@ -53,4 +53,58 @@ export async function create(data: { itemId: number, npcId: number, price: numbe
   })
 
   return repo.save(sold)
+}
+ // REMOVER
+export async function removeByItem(
+  itemId: number
+) {
+  await repo
+    .createQueryBuilder()
+    .delete()
+    .from(Soldby)
+    .where("itemId = :itemId", { itemId })
+    .execute();
+}
+
+export async function removeByNpc(
+  npcId: number
+) {
+  await repo
+    .createQueryBuilder()
+    .delete()
+    .from(Soldby)
+    .where("npcId = :npcId", { npcId })
+    .execute();
+}
+// BUSCAR 
+export async function getByItem(
+  itemId: number
+) {
+  return repo.find({
+    where: {
+      item: {
+        id: itemId
+      }
+    },
+    relations: [
+      "item",
+      "npc"
+    ]
+  });
+}
+
+export async function getByNpc(
+  npcId: number
+) {
+  return repo.find({
+    where: {
+      npc: {
+        id: npcId
+      }
+    },
+    relations: [
+      "item",
+      "npc"
+    ]
+  });
 }

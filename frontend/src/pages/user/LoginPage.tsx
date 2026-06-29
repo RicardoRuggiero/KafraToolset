@@ -3,9 +3,12 @@ import { useState } from "react";
 import { authService } from "../../services/authService";
 import HomeButton from "../../components/HomeButton";
 
+import { useAuth } from "../../contexts/AuthContext";
+
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const { login } = useAuth();
 
   const handleSubmit = async (
     e: React.FormEvent
@@ -27,12 +30,13 @@ function LoginPage() {
       senha,
     });
 
-    localStorage.setItem(
-      "token",
+    login(
       response.token
     );
 
-    alert("Login realizado com sucesso!");
+    alert(
+      "Login realizado com sucesso!"
+    );
   };
 
   return (

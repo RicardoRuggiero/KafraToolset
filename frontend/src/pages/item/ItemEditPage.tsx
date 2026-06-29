@@ -12,6 +12,7 @@ function ItemEditPage() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [weight, setWeight] = useState("");
+  const [image, setImage] = useState<File | null>(null);
 
   useEffect(() => {
     if (!id) return;
@@ -41,25 +42,58 @@ function ItemEditPage() {
       return;
     }
 
-    await itemService.update(
-      Number(id),
-      {
-        name,
-        description,
-        weight: Number(weight),
-      }
+    const formData = new FormData();
+
+    formData.append(
+      "name",
+      name
     );
 
-    alert("Item atualizado!");
+    formData.append(
+      "description",
+      description
+    );
 
-    navigate("/items");
+    formData.append(
+      "weight",
+      weight
+    );
+
+    if (image) {
+      formData.append(
+        "image",
+        image
+      );
+    }
+
+    try {
+      await itemService.update(
+        Number(id),
+        formData
+      );
+
+      alert("Item atualizado!");
+
+      navigate("/items");
+    } catch (err: any) {
+      console.error(err);
+
+      alert(
+        err?.response?.data?.error ??
+        "Erro ao atualizar item."
+      );
+    }
   };
 
   return (
     <div className="container mt-4 frutiger-page">
       <HomeButton />
+
       <div className="container mt-4 frutiger-page">
-        <h2 className="frutiger-subtitle">Editar Item</h2>
+
+        <h2 className="frutiger-subtitle">
+          Editar Item
+        </h2>
 
         <form onSubmit={handleSubmit}>
 
@@ -106,12 +140,35 @@ function ItemEditPage() {
             />
           </div>
 
+          <div className="mb-3">
+            <label className="form-label frutiger-label">
+              Nova imagem
+            </label>
+
+            <input
+              type="file"
+              accept="image/*"
+              className="form-control frutiger-input"
+              onChange={(e) => {
+                if (
+                  e.target.files &&
+                  e.target.files.length > 0
+                ) {
+                  setImage(
+                    e.target.files[0]
+                  );
+                }
+              }}
+            />
+          </div>
+
           <button
             type="submit"
             className="btn frutiger-btn"
           >
             Atualizar
           </button>
+
         </form>
       </div>
     </div>

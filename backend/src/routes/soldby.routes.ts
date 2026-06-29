@@ -14,7 +14,33 @@ import * as controller from "../controllers/soldby.controller"
 import { authMiddleware } from "../middlewares/auth.middleware"
 
 const router = Router()
-// CONTROLE
+// CRIA
 router.post("/", authMiddleware, controller.create)
+
+//REMOVE
+router.delete(
+  "/item/:itemId",
+  authMiddleware,
+  controller.removeByItem
+);
+
+router.delete(
+  "/npc/:npcId",
+  authMiddleware,
+  controller.removeByNpc
+);
+
+//BUSCAR
+router.get(
+  "/item/:itemId",
+  authMiddleware,
+  controller.getDependenciesByItem
+);
+
+router.get(
+  "/npc/:npcId",
+  authMiddleware,
+  controller.getDependenciesByNpc
+);
 
 export default router

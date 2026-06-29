@@ -21,7 +21,7 @@ router.get("/", controller.getAll)
 router.get("/:id", controller.getById)
 // CONTROLE
 router.post("/", authMiddleware, upload.single("image"), controller.create)
-router.put("/:id", authMiddleware, controller.update)
+router.put("/:id", authMiddleware, upload.single("image"), controller.update)
 router.delete("/:id", authMiddleware, controller.remove)
 
 export default router

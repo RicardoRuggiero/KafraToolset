@@ -1,7 +1,9 @@
 
 import { useEffect, useState } from "react";
 import { npcService } from "../../services/npcService";
+import { soldbyService } from "../../services/soldbyService";
 import type { Npc } from "../../types/Npc";
+import type { Soldby } from "../../types/Soldby";
 import { Link } from "react-router-dom";
 import HomeButton from "../../components/HomeButton";
 
@@ -16,23 +18,52 @@ function NpcListPage() {
     loadNpcs();
   }, []);
 
-  const handleDelete = async (id: number) => {
-    const confirmed = window.confirm(
-      "Deseja realmente excluir este NPC?"
-    );
+  const handleDelete = async (npc: Npc) => {
+    try {
+      const dependencies: Soldby[] =
+        await soldbyService.getByNpc(npc.id);
 
-    if (!confirmed) {
-      return;
+      let message =
+        `Deseja realmente excluir o NPC "${npc.name ?? "sem nome"}"?`;
+
+      if (dependencies.length > 0) {
+        message +=
+          `\n\nEste NPC está vinculado a ${dependencies.length} item(ns):\n`;
+
+        dependencies.forEach((relation) => {
+          message +=
+            `\n- ${relation.item?.name ?? "Item sem nome"} ` +
+            `(ID: ${relation.item?.id}) ` +
+            `por ${relation.price}z`;
+        });
+
+        message +=
+          "\n\nAo confirmar, estes vínculos também serão removidos.";
+      }
+
+      const confirmed = window.confirm(message);
+
+      if (!confirmed) {
+        return;
+      }
+
+      await soldbyService.removeByNpc(npc.id);
+      await npcService.delete(npc.id);
+
+      alert("NPC excluído com sucesso!");
+
+      loadNpcs();
+    } catch (error) {
+      alert(
+        "Erro ao excluir NPC. Verifique se você está logado."
+      );
     }
-
-    await npcService.delete(id);
-
-    loadNpcs();
   };
 
   return (
     <div className="container mt-4 frutiger-page">
       <HomeButton />
+
       <div className="container mt-4 frutiger-page">
         <h2 className="frutiger-subtitle">NPCs</h2>
 
@@ -65,7 +96,7 @@ function NpcListPage() {
                     <button
                       className="btn btn-danger btn-sm"
                       onClick={() =>
-                        handleDelete(npc.id)
+                        handleDelete(npc)
                       }
                     >
                       Excluir

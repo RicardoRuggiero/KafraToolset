@@ -66,6 +66,13 @@ function HomePage() {
           >
             Lista NPC
           </Link>
+          
+          <Link
+            to="/soldby/new"
+            className="btn frutiger-btn"
+          >
+            Item vendido por NPC
+          </Link>
 
         </div>
       </div>

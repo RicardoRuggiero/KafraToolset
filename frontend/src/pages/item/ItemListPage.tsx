@@ -1,7 +1,9 @@
 
 import { useEffect, useState } from "react";
 import { itemService } from "../../services/itemService";
+import { soldbyService } from "../../services/soldbyService";
 import type { Item } from "../../types/Item";
+import type { Soldby } from "../../types/Soldby";
 import { Link } from "react-router-dom";
 import HomeButton from "../../components/HomeButton";
 
@@ -16,29 +18,59 @@ function ItemListPage() {
     loadItems();
   }, []);
 
-  const handleDelete = async (id: number) => {
-    const confirmed = window.confirm(
-      "Deseja realmente excluir este item?"
-    );
+  const handleDelete = async (item: Item) => {
+    try {
+      const dependencies: Soldby[] =
+        await soldbyService.getByItem(item.id);
 
-    if (!confirmed) {
-      return;
+      let message =
+        `Deseja realmente excluir o item "${item.name}"?`;
+
+      if (dependencies.length > 0) {
+        message +=
+          `\n\nEste item está vinculado a ${dependencies.length} NPC(s):\n`;
+
+        dependencies.forEach((relation) => {
+          message +=
+            `\n- ${relation.npc?.name ?? "NPC sem nome"} ` +
+            `(ID: ${relation.npc?.id}) ` +
+            `por ${relation.price}z`;
+        });
+
+        message +=
+          "\n\nAo confirmar, estes vínculos também serão removidos.";
+      }
+
+      const confirmed = window.confirm(message);
+
+      if (!confirmed) {
+        return;
+      }
+
+      await soldbyService.removeByItem(item.id);
+      await itemService.delete(item.id);
+
+      alert("Item excluído com sucesso!");
+
+      loadItems();
+    } catch (error) {
+      alert(
+        "Erro ao excluir item. Verifique se você está logado."
+      );
     }
-
-    await itemService.delete(id);
-
-    loadItems();
   };
 
   return (
     <div className="container mt-4 frutiger-page">
       <HomeButton />
+
       <div className="container mt-4 frutiger-page">
         <h2 className="frutiger-subtitle">Itens</h2>
 
         <table className="table frutiger-table">
           <thead>
             <tr>
+              <th>Imagem</th>
               <th>ID</th>
               <th>Nome</th>
               <th>Peso</th>
@@ -49,6 +81,17 @@ function ItemListPage() {
           <tbody>
             {items.map((item) => (
               <tr key={item.id}>
+                <td>
+                  <img
+                    src={
+                      item.imageUrl
+                        ? `http://localhost:3000${item.imageUrl}`
+                        : "http://localhost:3000/uploads/semImagem.jpeg"
+                    }
+                    alt={item.name}
+                    className="item-thumbnail"
+                  />
+                </td>
                 <td>{item.id}</td>
                 <td>{item.name}</td>
                 <td>{item.weight}</td>
@@ -65,7 +108,7 @@ function ItemListPage() {
                     <button
                       className="btn btn-danger btn-sm"
                       onClick={() =>
-                        handleDelete(item.id)
+                        handleDelete(item)
                       }
                     >
                       Excluir
