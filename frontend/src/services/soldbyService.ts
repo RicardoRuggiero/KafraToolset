@@ -8,74 +8,25 @@ export const soldbyService = {
     npcId: number;
     price: number;
   }) => {
-    const token = localStorage.getItem("token");
-
-    const response = await api.post(
-      "/soldby",
-      data,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-
+    const response = await api.post("/soldby", data);
     return response.data;
   },
 
   getByItem: async (itemId: number) => {
-    const token = localStorage.getItem("token");
-
-    const response = await api.get<Soldby[]>(
-      `/soldby/item/${itemId}`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-
+    const response = await api.get<Soldby[]>(`/soldby/item/${itemId}`);
     return response.data;
   },
 
   getByNpc: async (npcId: number) => {
-    const token = localStorage.getItem("token");
-
-    const response = await api.get<Soldby[]>(
-      `/soldby/npc/${npcId}`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-
+    const response = await api.get<Soldby[]>(`/soldby/npc/${npcId}`);
     return response.data;
   },
 
   removeByItem: async (itemId: number) => {
-    const token = localStorage.getItem("token");
-
-    await api.delete(
-      `/soldby/item/${itemId}`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
+    await api.delete(`/soldby/item/${itemId}`);
   },
 
   removeByNpc: async (npcId: number) => {
-    const token = localStorage.getItem("token");
-
-    await api.delete(
-      `/soldby/npc/${npcId}`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
+    await api.delete(`/soldby/npc/${npcId}`);
   },
 };
