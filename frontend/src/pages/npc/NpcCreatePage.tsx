@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { npcService } from "../../services/npcService";
 import HomeButton from "../../components/HomeButton";
+import ValidatedInput from "../../components/ValidatedInput";
 
 function NpcCreatePage() {
   const [id, setId] = useState("");
@@ -75,86 +76,59 @@ function NpcCreatePage() {
         <h2 className="frutiger-subtitle">Cadastro de NPC</h2>
 
         <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label className="form-label frutiger-label">ID</label>
-            <input
-              type="number"
-              className="form-control frutiger-input"
-              value={id}
-              onChange={(e) =>
-                setId(e.target.value)
-              }
-            />
-          </div>
 
-          <div className="mb-3">
-            <label className="form-label frutiger-label">Nome</label>
-            <input
-              className="form-control frutiger-input"
-              value={name}
-              onChange={(e) =>
-                setName(e.target.value)
-              }
-            />
-          </div>
+          <ValidatedInput
+            label="ID"
+            value={id}
+            onChange={setId}
+            errorMessage="Informe o ID."
+            type="number"
+          />
 
-          <div className="mb-3">
-            <label className="form-label frutiger-label">Mapname</label>
-            <input
-              className="form-control frutiger-input"
-              value={mapname}
-              onChange={(e) =>
-                setMapname(e.target.value)
-              }
-            />
-          </div>
+          <ValidatedInput
+            label="Nome"
+            value={name}
+            onChange={setName}
+            errorMessage="Informe o nome."
+          />
 
-          <div className="mb-3">
-            <label className="form-label frutiger-label">X</label>
-            <input
-              type="number"
-              className="form-control frutiger-input"
-              value={x}
-              onChange={(e) =>
-                setX(e.target.value)
-              }
-            />
-          </div>
+          <ValidatedInput
+            label="Mapname"
+            value={mapname}
+            onChange={setMapname}
+            errorMessage="Informe o mapname."
+          />
 
-          <div className="mb-3">
-            <label className="form-label frutiger-label">Y</label>
-            <input
-              type="number"
-              className="form-control frutiger-input"
-              value={y}
-              onChange={(e) =>
-                setY(e.target.value)
-              }
-            />
-          </div>
+          <ValidatedInput
+            label="X"
+            value={x}
+            onChange={setX}
+            errorMessage="Informe a coordenada X."
+            type="number"
+          />
 
-          <div className="mb-3">
-            <label className="form-label frutiger-label">Job</label>
-            <input
-              type="number"
-              className="form-control frutiger-input"
-              value={job}
-              onChange={(e) =>
-                setJob(e.target.value)
-              }
-            />
-          </div>
+          <ValidatedInput
+            label="Y"
+            value={y}
+            onChange={setY}
+            errorMessage="Informe a coordenada Y."
+            type="number"
+          />
 
-          <div className="mb-3">
-            <label className="form-label frutiger-label">Type</label>
-            <input
-              className="form-control frutiger-input"
-              value={type}
-              onChange={(e) =>
-                setType(e.target.value)
-              }
-            />
-          </div>
+          <ValidatedInput
+            label="Job"
+            value={job}
+            onChange={setJob}
+            errorMessage="Informe o job."
+            type="number"
+          />
+
+          <ValidatedInput
+            label="Type"
+            value={type}
+            onChange={setType}
+            errorMessage="Informe o type."
+          />
 
           <button
             type="submit"

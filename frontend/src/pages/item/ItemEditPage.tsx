@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { itemService } from "../../services/itemService";
 import HomeButton from "../../components/HomeButton";
+import ValidatedInput from "../../components/ValidatedInput";
 
 function ItemEditPage() {
   const { id } = useParams();
@@ -97,48 +98,28 @@ function ItemEditPage() {
 
         <form onSubmit={handleSubmit}>
 
-          <div className="mb-3">
-            <label className="form-label frutiger-label">
-              Nome
-            </label>
+          <ValidatedInput
+            label="Nome"
+            value={name}
+            onChange={setName}
+            errorMessage="Informe o nome."
+          />
 
-            <input
-              className="form-control frutiger-input"
-              value={name}
-              onChange={(e) =>
-                setName(e.target.value)
-              }
-            />
-          </div>
+          <ValidatedInput
+            label="Descrição"
+            value={description}
+            onChange={setDescription}
+            errorMessage="Informe a descrição."
+            textarea
+          />
 
-          <div className="mb-3">
-            <label className="form-label frutiger-label">
-              Descrição
-            </label>
-
-            <textarea
-              className="form-control frutiger-input"
-              value={description}
-              onChange={(e) =>
-                setDescription(e.target.value)
-              }
-            />
-          </div>
-
-          <div className="mb-3">
-            <label className="form-label frutiger-label">
-              Peso
-            </label>
-
-            <input
-              type="number"
-              className="form-control frutiger-input"
-              value={weight}
-              onChange={(e) =>
-                setWeight(e.target.value)
-              }
-            />
-          </div>
+          <ValidatedInput
+            label="Peso"
+            value={weight}
+            onChange={setWeight}
+            errorMessage="Informe o peso."
+            type="number"
+          />
 
           <div className="mb-3">
             <label className="form-label frutiger-label">

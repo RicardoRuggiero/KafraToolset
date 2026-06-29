@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { itemService } from "../../services/itemService";
 import HomeButton from "../../components/HomeButton";
+import ValidatedInput from "../../components/ValidatedInput";
 
 function ItemCreatePage() {
   const [id, setId] = useState("");
@@ -60,63 +61,36 @@ function ItemCreatePage() {
 
         <form onSubmit={handleSubmit}>
 
-          <div className="mb-3">
-            <label className="form-label frutiger-label">
-              ID
-            </label>
+          <ValidatedInput
+            label="ID"
+            value={id}
+            onChange={setId}
+            errorMessage="Informe o ID."
+            type="number"
+          />
 
-            <input
-              type="number"
-              className="form-control frutiger-input"
-              value={id}
-              onChange={(e) =>
-                setId(e.target.value)
-              }
-            />
-          </div>
+          <ValidatedInput
+            label="Nome"
+            value={name}
+            onChange={setName}
+            errorMessage="Informe o nome."
+          />
 
-          <div className="mb-3">
-            <label className="form-label frutiger-label">
-              Nome
-            </label>
+          <ValidatedInput
+            label="Descrição"
+            value={description}
+            onChange={setDescription}
+            errorMessage="Informe a descrição."
+            textarea
+          />
 
-            <input
-              className="form-control frutiger-input"
-              value={name}
-              onChange={(e) =>
-                setName(e.target.value)
-              }
-            />
-          </div>
-
-          <div className="mb-3">
-            <label className="form-label frutiger-label">
-              Descrição
-            </label>
-
-            <textarea
-              className="form-control frutiger-input"
-              value={description}
-              onChange={(e) =>
-                setDescription(e.target.value)
-              }
-            />
-          </div>
-
-          <div className="mb-3">
-            <label className="form-label frutiger-label">
-              Peso
-            </label>
-
-            <input
-              type="number"
-              className="form-control frutiger-input"
-              value={weight}
-              onChange={(e) =>
-                setWeight(e.target.value)
-              }
-            />
-          </div>
+          <ValidatedInput
+            label="Peso"
+            value={weight}
+            onChange={setWeight}
+            errorMessage="Informe o peso."
+            type="number"
+          />
 
           <div className="mb-3">
             <label className="form-label frutiger-label">

@@ -1,12 +1,33 @@
 
 import { useState } from "react";
 import { authService } from "../../services/authService";
+import RegisterValidatedInput from "../../components/RegisterValidatedInput";
 import HomeButton from "../../components/HomeButton";
 
 function RegisterPage() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [secret, setSecret] = useState("");
+
+  const hasStarted =
+    email.trim() !== "" ||
+    senha.trim() !== "" ||
+    secret.trim() !== "";
+
+  const emailInvalid =
+    hasStarted &&
+    (
+      email.trim() === "" ||
+      !email.includes("@")
+    );
+
+  const senhaInvalid =
+    hasStarted &&
+    senha.trim() === "";
+
+  const secretInvalid =
+    hasStarted &&
+    secret.trim() === "";
 
   const handleSubmit = async (
     e: React.FormEvent
@@ -45,55 +66,47 @@ function RegisterPage() {
     <div className="container mt-4 frutiger-page">
       <HomeButton />
 
-      <h2 className="frutiger-subtitle">Itens</h2>
+      <h2 className="frutiger-subtitle">Seja bem vindo! Para entrar é necessário se registrar ~</h2>
       <div className="container mt-4 frutiger-page">
         <h2>Cadastro de Usuário</h2>
-
         <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label className="form-label frutiger-label">
-              Email
-            </label>
 
-            <input
-              type="email"
-              className="form-control frutiger-input"
-              value={email}
-              onChange={(e) =>
-                setEmail(e.target.value)
-              }
-            />
-          </div>
+          <RegisterValidatedInput
+            label="Email"
+            type="email"
+            value={email}
+            onChange={setEmail}
+            isInvalid={emailInvalid}
+            isValid={
+              email.trim() !== "" &&
+              email.includes("@")
+            }
+            errorMessage={
+              email.trim() === ""
+                ? "Informe o email."
+                : "Email inválido."
+            }
+          />
 
-          <div className="mb-3">
-            <label className="form-label frutiger-label">
-              Senha
-            </label>
+          <RegisterValidatedInput
+            label="Senha"
+            type="password"
+            value={senha}
+            onChange={setSenha}
+            isInvalid={senhaInvalid}
+            isValid={senha.trim() !== ""}
+            errorMessage="Informe a senha."
+          />
 
-            <input
-              type="password"
-              className="form-control frutiger-input"
-              value={senha}
-              onChange={(e) =>
-                setSenha(e.target.value)
-              }
-            />
-          </div>
-
-          <div className="mb-3">
-            <label className="form-label frutiger-label">
-              Secret
-            </label>
-
-            <input
-              className="form-control frutiger-input"
-              value={secret}
-              onChange={(e) =>
-                setSecret(e.target.value)
-              }
-            />
-          </div>
-
+          <RegisterValidatedInput
+            label="Secret"
+            type="text"
+            value={secret}
+            onChange={setSecret}
+            isInvalid={secretInvalid}
+            isValid={secret.trim() !== ""}
+            errorMessage="Informe o secret."
+          />
           <button
             type="submit"
             className="btn frutiger-btn"

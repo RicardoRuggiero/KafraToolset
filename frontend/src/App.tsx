@@ -18,6 +18,7 @@ import NpcEditPage from "./pages/npc/NpcEditPage";
 import SoldbyCreatePage from "./pages/soldby/SoldbyCreatePage";
 
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import BackButton from "./components/BackButton";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
 
         <Route path="/soldby/new" element={<ProtectedRoute><SoldbyCreatePage /></ProtectedRoute>} />
       </Routes>
+      <BackButton />
       <ScrollToTopButton />
     </BrowserRouter>
   );
