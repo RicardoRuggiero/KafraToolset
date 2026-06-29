@@ -1,0 +1,107 @@
+
+.user-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.user-menu-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+
+  cursor: pointer;
+  transition: 0.2s;
+
+  text-align: left;
+}
+
+.user-menu-button:hover {
+  transform: translateY(-1px);
+}
+
+.user-avatar {
+  min-width: 48px;
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  background: linear-gradient(
+    135deg,
+    #6de7ff,
+    #8bffb3
+  );
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.user-email {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.user-dropdown {
+  position: absolute;
+
+  top: 0;
+  left: calc(100% + 10px);
+
+  min-width: 120px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(10px);
+
+  padding: 6px;
+
+  z-index: 999;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.user-dropdown-item {
+  width: 100%;
+
+  border: none;
+  background: none;
+
+  padding: 10px 12px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  text-align: left;
+  font-weight: 600;
+}
+
+.user-dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.45);
+}

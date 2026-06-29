@@ -1,8 +1,12 @@
 
 import { Link } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
+import UserMenu from "../../components/UserMenu";
 
 function HomePage() {
+  const { isAuthenticated } = useAuth();
   return (
+
     <div className="container py-5">
 
       <div
@@ -32,12 +36,22 @@ function HomePage() {
             Novo Usuário
           </Link>
 
-          <Link
-            to="/login"
-            className="btn frutiger-btn"
-          >
-            Login Usuário
-          </Link>
+          {
+            !isAuthenticated && (
+              <Link
+                to="/login"
+                className="btn frutiger-btn"
+              >
+                Login Usuário
+              </Link>
+            )
+          }
+
+          {
+            isAuthenticated && (
+              <UserMenu />
+            )
+          }
 
           <Link
             to="/items/new"
@@ -66,7 +80,7 @@ function HomePage() {
           >
             Lista NPC
           </Link>
-          
+
           <Link
             to="/soldby/new"
             className="btn frutiger-btn"
