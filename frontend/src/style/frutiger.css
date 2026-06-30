@@ -267,3 +267,185 @@ body {
       0.15
     );
 }
+
+/* ===========================================================
+   RESPONSIVIDADE - 421px até 520px
+   =========================================================== */
+
+@media (min-width: 421px) and (max-width: 520px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .frutiger-page {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .frutiger-table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 0.82rem;
+  }
+
+  .frutiger-table th,
+  .frutiger-table td {
+    padding: 8px 6px;
+    vertical-align: middle;
+    word-break: break-word;
+  }
+
+  .frutiger-table th:nth-child(1),
+  .frutiger-table td:nth-child(1) {
+    width: 58px;
+  }
+
+  .frutiger-table th:nth-child(2),
+  .frutiger-table td:nth-child(2) {
+    width: 42px;
+  }
+
+  .frutiger-table th:nth-child(3),
+  .frutiger-table td:nth-child(3) {
+    width: auto;
+  }
+
+  .frutiger-table th:nth-child(4),
+  .frutiger-table td:nth-child(4) {
+    width: 46px;
+    text-align: center;
+  }
+
+  .frutiger-table th:nth-child(5),
+  .frutiger-table td:nth-child(5) {
+    width: 74px;
+  }
+
+  .item-thumbnail {
+    width: 42px;
+    height: 42px;
+  }
+
+  .frutiger-table .d-flex {
+    flex-direction: column;
+    gap: 6px !important;
+  }
+
+  .frutiger-table .btn {
+    width: 100%;
+    padding: 5px 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+}
+
+/* ===========================================================
+   RESPONSIVIDADE - 320px até 420px
+   =========================================================== */
+
+@media (min-width: 320px) and (max-width: 420px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .frutiger-page {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+  .frutiger-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .frutiger-table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 0.74rem;
+  }
+
+  .frutiger-table th,
+  .frutiger-table td {
+    padding: 6px 4px;
+    vertical-align: middle;
+    word-break: break-word;
+  }
+
+  .frutiger-table th:nth-child(1),
+  .frutiger-table td:nth-child(1) {
+    width: 46px;
+  }
+
+  .frutiger-table th:nth-child(2),
+  .frutiger-table td:nth-child(2) {
+    width: 34px;
+  }
+
+  .frutiger-table th:nth-child(3),
+  .frutiger-table td:nth-child(3) {
+    width: auto;
+  }
+
+  .frutiger-table th:nth-child(4),
+  .frutiger-table td:nth-child(4) {
+    width: 34px;
+    text-align: center;
+  }
+
+  .frutiger-table th:nth-child(5),
+  .frutiger-table td:nth-child(5) {
+    width: 58px;
+  }
+
+  .item-thumbnail {
+    width: 34px;
+    height: 34px;
+    padding: 2px;
+    border-radius: 8px;
+  }
+
+  .frutiger-table .d-flex {
+    flex-direction: column;
+    gap: 4px !important;
+  }
+
+  .frutiger-table .btn {
+    width: 100%;
+    padding: 4px 3px;
+    font-size: 0.64rem;
+    white-space: nowrap;
+  }
+
+  .back-button {
+    right: 82px;
+    bottom: 18px;
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+
+  .scroll-top-button {
+    right: 24px;
+    bottom: 18px;
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+}
