@@ -27,18 +27,13 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-
         <Route path="/items" element={<ItemListPage />} />
-
-        <Route path="/items/new" element={<ProtectedRoute><ItemCreatePage /></ProtectedRoute>} />
-        <Route path="/items/edit/:id" element={<ProtectedRoute><ItemEditPage /></ProtectedRoute>} />
-
         <Route path="/npcs" element={<NpcListPage />} />
-
+        <Route path="/items/new" element={<ProtectedRoute><ItemCreatePage /></ProtectedRoute>} />
         <Route path="/npcs/new" element={<ProtectedRoute><NpcCreatePage /></ProtectedRoute>} />
-        <Route path="/npcs/edit/:id" element={<ProtectedRoute><NpcEditPage /></ProtectedRoute>} />
-
         <Route path="/soldby/new" element={<ProtectedRoute><SoldbyCreatePage /></ProtectedRoute>} />
+        <Route path="/items/edit/:id" element={<ProtectedRoute><ItemEditPage /></ProtectedRoute>} />
+        <Route path="/npcs/edit/:id" element={<ProtectedRoute><NpcEditPage /></ProtectedRoute>} />
       </Routes>
       <BackButton />
       <ScrollToTopButton />
