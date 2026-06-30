@@ -67,7 +67,7 @@ function NpcListPage() {
       <div className="container mt-4 frutiger-page">
         <h2 className="frutiger-subtitle">NPCs</h2>
 
-        <table className="table frutiger-table">
+        <table className="table frutiger-table npc-table">
           <thead>
             <tr>
               <th>ID</th>

@@ -6,6 +6,7 @@ import App from "./App.tsx";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style/frutiger.css";
+import "./style/list-responsive.css";
 
 import { AuthProvider } from "./contexts/AuthContext";
 

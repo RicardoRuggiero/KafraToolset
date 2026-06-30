@@ -1,0 +1,289 @@
+/* ===========================================================
+   BASE MOBILE DAS LISTAS
+   =========================================================== */
+
+@media (min-width: 320px) and (max-width: 560px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .frutiger-page {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ===========================================================
+   ITEM LIST - 421px até 520px
+   Tabela: Imagem | ID | Nome | Peso | Ações
+   =========================================================== */
+
+@media (min-width: 421px) and (max-width: 520px) {
+  .frutiger-table:not(.npc-table) {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 0.82rem;
+  }
+
+  .frutiger-table:not(.npc-table) th,
+  .frutiger-table:not(.npc-table) td {
+    padding: 8px 6px;
+    vertical-align: middle;
+    word-break: break-word;
+  }
+
+  .frutiger-table:not(.npc-table) th:nth-child(1),
+  .frutiger-table:not(.npc-table) td:nth-child(1) {
+    width: 58px;
+  }
+
+  .frutiger-table:not(.npc-table) th:nth-child(2),
+  .frutiger-table:not(.npc-table) td:nth-child(2) {
+    width: 42px;
+  }
+
+  .frutiger-table:not(.npc-table) th:nth-child(3),
+  .frutiger-table:not(.npc-table) td:nth-child(3) {
+    width: auto;
+  }
+
+  .frutiger-table:not(.npc-table) th:nth-child(4),
+  .frutiger-table:not(.npc-table) td:nth-child(4) {
+    width: 46px;
+    text-align: center;
+  }
+
+  .frutiger-table:not(.npc-table) th:nth-child(5),
+  .frutiger-table:not(.npc-table) td:nth-child(5) {
+    width: 74px;
+  }
+
+  .item-thumbnail {
+    width: 42px;
+    height: 42px;
+  }
+
+  .frutiger-table:not(.npc-table) .d-flex {
+    flex-direction: column;
+    gap: 6px !important;
+  }
+
+  .frutiger-table:not(.npc-table) .btn {
+    width: 100%;
+    padding: 5px 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+}
+
+/* ===========================================================
+   ITEM LIST - 320px até 420px
+   Tabela: Imagem | ID | Nome | Peso | Ações
+   =========================================================== */
+
+@media (min-width: 320px) and (max-width: 420px) {
+  .container {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .frutiger-page {
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+  .frutiger-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .frutiger-table:not(.npc-table) {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 0.74rem;
+  }
+
+  .frutiger-table:not(.npc-table) th,
+  .frutiger-table:not(.npc-table) td {
+    padding: 6px 4px;
+    vertical-align: middle;
+    word-break: break-word;
+  }
+
+  .frutiger-table:not(.npc-table) th:nth-child(1),
+  .frutiger-table:not(.npc-table) td:nth-child(1) {
+    width: 46px;
+  }
+
+  .frutiger-table:not(.npc-table) th:nth-child(2),
+  .frutiger-table:not(.npc-table) td:nth-child(2) {
+    width: 34px;
+  }
+
+  .frutiger-table:not(.npc-table) th:nth-child(3),
+  .frutiger-table:not(.npc-table) td:nth-child(3) {
+    width: auto;
+  }
+
+  .frutiger-table:not(.npc-table) th:nth-child(4),
+  .frutiger-table:not(.npc-table) td:nth-child(4) {
+    width: 34px;
+    text-align: center;
+  }
+
+  .frutiger-table:not(.npc-table) th:nth-child(5),
+  .frutiger-table:not(.npc-table) td:nth-child(5) {
+    width: 58px;
+  }
+
+  .item-thumbnail {
+    width: 34px;
+    height: 34px;
+    padding: 2px;
+    border-radius: 8px;
+  }
+
+  .frutiger-table:not(.npc-table) .d-flex {
+    flex-direction: column;
+    gap: 4px !important;
+  }
+
+  .frutiger-table:not(.npc-table) .btn {
+    width: 100%;
+    padding: 4px 3px;
+    font-size: 0.64rem;
+    white-space: nowrap;
+  }
+}
+
+/* ===========================================================
+   NPC LIST - 460px até 560px
+   Tabela: ID | Nome | Mapa | Ações
+   =========================================================== */
+
+@media (min-width: 460px) and (max-width: 560px) {
+  .npc-table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 0.82rem;
+  }
+
+  .npc-table th,
+  .npc-table td {
+    padding: 8px 5px;
+    vertical-align: middle;
+    word-break: break-word;
+  }
+
+  .npc-table th:nth-child(1),
+  .npc-table td:nth-child(1) {
+    width: 18%;
+    text-align: center;
+  }
+
+  .npc-table th:nth-child(2),
+  .npc-table td:nth-child(2) {
+    width: 36%;
+  }
+
+  .npc-table th:nth-child(3),
+  .npc-table td:nth-child(3) {
+    width: 18%;
+    text-align: center;
+  }
+
+  .npc-table th:nth-child(4),
+  .npc-table td:nth-child(4) {
+    width: 28%;
+  }
+
+  .npc-table .d-flex {
+    flex-direction: column;
+    gap: 5px !important;
+  }
+
+  .npc-table .btn {
+    width: 100%;
+    font-size: 0.72rem;
+    padding: 5px;
+  }
+}
+
+/* ===========================================================
+   NPC LIST - 360px até 459px
+   Tabela: ID | Nome | Mapa | Ações
+   =========================================================== */
+
+@media (min-width: 360px) and (max-width: 459px) {
+  .npc-table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 0.70rem;
+  }
+
+  .npc-table th,
+  .npc-table td {
+    padding: 5px 3px;
+    vertical-align: middle;
+    word-break: break-word;
+  }
+
+  .npc-table th:nth-child(1),
+  .npc-table td:nth-child(1) {
+    width: 18%;
+    text-align: center;
+  }
+
+  .npc-table th:nth-child(2),
+  .npc-table td:nth-child(2) {
+    width: 42%;
+  }
+
+  .npc-table th:nth-child(3),
+  .npc-table td:nth-child(3) {
+    width: 16%;
+    text-align: center;
+  }
+
+  .npc-table th:nth-child(4),
+  .npc-table td:nth-child(4) {
+    width: 24%;
+  }
+
+  .npc-table .d-flex {
+    flex-direction: column;
+    gap: 4px !important;
+  }
+
+  .npc-table .btn {
+    width: 100%;
+    font-size: 0.62rem;
+    padding: 4px;
+  }
+}
+
+/* ===========================================================
+   BOTÕES FLUTUANTES EM MOBILE
+   =========================================================== */
+
+@media (min-width: 320px) and (max-width: 420px) {
+  .back-button {
+    right: 82px;
+    bottom: 18px;
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+
+  .scroll-top-button {
+    right: 24px;
+    bottom: 18px;
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+}
