@@ -1,4 +1,3 @@
-
 import type { Item } from "./Item";
 import type { Npc } from "./Npc";
 

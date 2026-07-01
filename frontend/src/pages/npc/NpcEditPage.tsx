@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { npcService } from "../../services/npcService";
@@ -79,51 +78,17 @@ function NpcEditPage() {
         <h2 className="frutiger-subtitle">Editar NPC</h2>
 
         <form onSubmit={handleSubmit}>
+          <ValidatedInput label="Nome" value={name} onChange={setName} errorMessage="Informe o nome." />
 
-          <ValidatedInput
-            label="Nome"
-            value={name}
-            onChange={setName}
-            errorMessage="Informe o nome."
-          />
+          <ValidatedInput label="Mapname" value={mapname} onChange={setMapname} errorMessage="Informe o mapname." />
 
-          <ValidatedInput
-            label="Mapname"
-            value={mapname}
-            onChange={setMapname}
-            errorMessage="Informe o mapname."
-          />
+          <ValidatedInput label="X" value={x} onChange={setX} errorMessage="Informe a coordenada X." type="number" />
 
-          <ValidatedInput
-            label="X"
-            value={x}
-            onChange={setX}
-            errorMessage="Informe a coordenada X."
-            type="number"
-          />
+          <ValidatedInput label="Y" value={y} onChange={setY} errorMessage="Informe a coordenada Y." type="number" />
 
-          <ValidatedInput
-            label="Y"
-            value={y}
-            onChange={setY}
-            errorMessage="Informe a coordenada Y."
-            type="number"
-          />
+          <ValidatedInput label="Job" value={job} onChange={setJob} errorMessage="Informe o job." type="number" />
 
-          <ValidatedInput
-            label="Job"
-            value={job}
-            onChange={setJob}
-            errorMessage="Informe o job."
-            type="number"
-          />
-
-          <ValidatedInput
-            label="Type"
-            value={type}
-            onChange={setType}
-            errorMessage="Informe o type."
-          />
+          <ValidatedInput label="Type" value={type} onChange={setType} errorMessage="Informe o type." />
 
           <button type="submit" className="btn frutiger-btn">
             Atualizar

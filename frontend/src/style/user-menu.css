@@ -1,4 +1,3 @@
-
 .user-menu-container {
   position: relative;
   display: inline-block;
@@ -43,11 +42,7 @@
   font-size: 22px;
   font-weight: bold;
 
-  background: linear-gradient(
-    135deg,
-    #6de7ff,
-    #8bffb3
-  );
+  background: linear-gradient(135deg, #6de7ff, #8bffb3);
 }
 
 .user-info {

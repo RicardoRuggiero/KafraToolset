@@ -1,6 +1,4 @@
-
-import { createContext, useContext, useState} from "react";
-
+import { createContext, useContext, useState } from "react";
 import type { ReactNode } from "react";
 
 interface AuthUser {
@@ -16,8 +14,7 @@ interface AuthContextType {
   logout: () => void;
 }
 
-const AuthContext =
-  createContext<AuthContextType>( {} as AuthContextType );
+const AuthContext = createContext<AuthContextType>({} as AuthContextType);
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -25,13 +22,10 @@ interface AuthProviderProps {
 
 function decodeToken(token: string): AuthUser | null {
   try {
-    const payloadBase64 =
-      token.split(".")[1];
+    const payloadBase64 = token.split(".")[1];
 
     const payloadJson = atob(payloadBase64);
-
     const payload = JSON.parse(payloadJson);
-
     const email = payload.email;
 
     if (!email) {
@@ -40,38 +34,23 @@ function decodeToken(token: string): AuthUser | null {
 
     const name = email.split("@")[0];
 
-    return {email, name};
+    return { email, name };
   } catch {
     return null;
   }
 }
 
-export function AuthProvider({
-  children
-}: AuthProviderProps) {
-  const storedToken =
-    localStorage.getItem("token");
+export function AuthProvider({ children }: AuthProviderProps) {
+  const storedToken = localStorage.getItem("token");
 
-  const [token, setToken] =
-    useState<string | null>(
-      storedToken
-    );
+  const [token, setToken] = useState<string | null>(storedToken);
 
-  const [user, setUser] =
-    useState<AuthUser | null>(
-      storedToken
-        ? decodeToken(storedToken)
-        : null
-    );
+  const [user, setUser] = useState<AuthUser | null>(storedToken ? decodeToken(storedToken) : null);
 
-  const login = ( newToken: string ) => {
-    localStorage.setItem(
-      "token",
-      newToken
-    );
+  const login = (newToken: string) => {
+    localStorage.setItem("token", newToken);
 
     setToken(newToken);
-
     setUser(decodeToken(newToken));
   };
 
@@ -81,17 +60,9 @@ export function AuthProvider({
     setUser(null);
   };
 
-  return (
-    <AuthContext.Provider
-      value={{ token, user, isAuthenticated: !!token, login, logout }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={{ token, user, isAuthenticated: !!token, login, logout }}>{children}</AuthContext.Provider>;
 }
 
 export function useAuth() {
-  return useContext(
-    AuthContext
-  );
+  return useContext(AuthContext);
 }

@@ -1,13 +1,8 @@
-
 import api from "./api";
 import type { Soldby } from "../types/Soldby";
 
 export const soldbyService = {
-  create: async (data: {
-    itemId: number;
-    npcId: number;
-    price: number;
-  }) => {
+  create: async (data: { itemId: number; npcId: number; price: number }) => {
     const response = await api.post("/soldby", data);
     return response.data;
   },

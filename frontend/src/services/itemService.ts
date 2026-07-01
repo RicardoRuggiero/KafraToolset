@@ -1,9 +1,7 @@
-
 import api from "./api";
 import type { Item } from "../types/Item";
 
 export const itemService = {
-
   getAll: async () => {
     const response = await api.get<Item[]>("/items");
     return response.data;
@@ -20,8 +18,7 @@ export const itemService = {
   },
 
   create: async (item: FormData) => {
-    const response =
-      await api.post("/items", item);
+    const response = await api.post("/items", item);
     return response.data;
   },
 

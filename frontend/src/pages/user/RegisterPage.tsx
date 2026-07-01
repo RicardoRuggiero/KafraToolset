@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { authService } from "../../services/authService";
 import RegisterValidatedInput from "../../components/RegisterValidatedInput";
@@ -9,29 +8,15 @@ function RegisterPage() {
   const [senha, setSenha] = useState("");
   const [secret, setSecret] = useState("");
 
-  const hasStarted =
-    email.trim() !== "" ||
-    senha.trim() !== "" ||
-    secret.trim() !== "";
+  const hasStarted = email.trim() !== "" || senha.trim() !== "" || secret.trim() !== "";
 
-  const emailInvalid =
-    hasStarted &&
-    (
-      email.trim() === "" ||
-      !email.includes("@")
-    );
+  const emailInvalid = hasStarted && (email.trim() === "" || !email.includes("@"));
 
-  const senhaInvalid =
-    hasStarted &&
-    senha.trim() === "";
+  const senhaInvalid = hasStarted && senha.trim() === "";
 
-  const secretInvalid =
-    hasStarted &&
-    secret.trim() === "";
+  const secretInvalid = hasStarted && secret.trim() === "";
 
-  const handleSubmit = async (
-    e: React.FormEvent
-  ) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!email.trim()) {
@@ -49,11 +34,7 @@ function RegisterPage() {
       return;
     }
 
-    await authService.register({
-      email,
-      senha,
-      secret,
-    });
+    await authService.register({ email, senha, secret });
 
     alert("Usuário cadastrado com sucesso!");
 
@@ -70,22 +51,14 @@ function RegisterPage() {
       <div className="container mt-4 frutiger-page">
         <h2>Cadastro de Usuário</h2>
         <form onSubmit={handleSubmit}>
-
           <RegisterValidatedInput
             label="Email"
             type="email"
             value={email}
             onChange={setEmail}
             isInvalid={emailInvalid}
-            isValid={
-              email.trim() !== "" &&
-              email.includes("@")
-            }
-            errorMessage={
-              email.trim() === ""
-                ? "Informe o email."
-                : "Email inválido."
-            }
+            isValid={email.trim() !== "" && email.includes("@")}
+            errorMessage={email.trim() === "" ? "Informe o email." : "Email inválido."}
           />
 
           <RegisterValidatedInput
@@ -107,10 +80,8 @@ function RegisterPage() {
             isValid={secret.trim() !== ""}
             errorMessage="Informe o secret."
           />
-          <button
-            type="submit"
-            className="btn frutiger-btn"
-          >
+
+          <button type="submit" className="btn frutiger-btn">
             Cadastrar
           </button>
         </form>

@@ -1,4 +1,3 @@
-
 import api from "./api";
 import type { Npc } from "../types/Npc";
 
@@ -19,7 +18,7 @@ export const npcService = {
   },
 
   update: async (id: number, npc: Npc) => {
-    const response = await api.put(`/npcs/${id}`,npc);
+    const response = await api.put(`/npcs/${id}`, npc);
     return response.data;
   },
 

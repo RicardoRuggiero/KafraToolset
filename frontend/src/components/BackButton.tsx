@@ -1,9 +1,5 @@
-
 import { useEffect, useState } from "react";
-import {
-  useLocation,
-  useNavigate,
-} from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import "../style/back-button.css";
 
@@ -11,13 +7,10 @@ function BackButton() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [enabled, setEnabled] =
-    useState(false);
+  const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    setEnabled(
-      window.history.length > 1
-    );
+    setEnabled(window.history.length > 1);
   }, [location.pathname]);
 
   const handleClick = () => {
@@ -33,14 +26,7 @@ function BackButton() {
   }
 
   return (
-    <button
-      className={
-        enabled
-          ? "back-button enabled"
-          : "back-button disabled"
-      }
-      onClick={handleClick}
-    >
+    <button className={enabled ? "back-button enabled" : "back-button disabled"} onClick={handleClick}>
       ←
     </button>
   );

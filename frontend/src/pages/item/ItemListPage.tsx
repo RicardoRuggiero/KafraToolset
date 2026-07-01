@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { itemService } from "../../services/itemService";
 import { soldbyService } from "../../services/soldbyService";
@@ -20,25 +19,18 @@ function ItemListPage() {
 
   const handleDelete = async (item: Item) => {
     try {
-      const dependencies: Soldby[] =
-        await soldbyService.getByItem(item.id);
+      const dependencies: Soldby[] = await soldbyService.getByItem(item.id);
 
-      let message =
-        `Deseja realmente excluir o item "${item.name}"?`;
+      let message = `Deseja realmente excluir o item "${item.name}"?`;
 
       if (dependencies.length > 0) {
-        message +=
-          `\n\nEste item está vinculado a ${dependencies.length} NPC(s):\n`;
+        message += `\n\nEste item está vinculado a ${dependencies.length} NPC(s):\n`;
 
         dependencies.forEach((relation) => {
-          message +=
-            `\n- ${relation.npc?.name ?? "NPC sem nome"} ` +
-            `(ID: ${relation.npc?.id}) ` +
-            `por ${relation.price}z`;
+          message += `\n- ${relation.npc?.name ?? "NPC sem nome"} ` + `(ID: ${relation.npc?.id}) ` + `por ${relation.price}z`;
         });
 
-        message +=
-          "\n\nAo confirmar, estes vínculos também serão removidos.";
+        message += "\n\nAo confirmar, estes vínculos também serão removidos.";
       }
 
       const confirmed = window.confirm(message);
@@ -54,9 +46,7 @@ function ItemListPage() {
 
       loadItems();
     } catch (error) {
-      alert(
-        "Erro ao excluir item. Verifique se você está logado."
-      );
+      alert("Erro ao excluir item. Verifique se você está logado.");
     }
   };
 
@@ -83,11 +73,7 @@ function ItemListPage() {
               <tr key={item.id}>
                 <td>
                   <img
-                    src={
-                      item.imageUrl
-                        ? `http://localhost:3000${item.imageUrl}`
-                        : "http://localhost:3000/uploads/semImagem.jpeg"
-                    }
+                    src={item.imageUrl ? `http://localhost:3000${item.imageUrl}` : "http://localhost:3000/uploads/semImagem.jpeg"}
                     alt={item.name}
                     className="item-thumbnail"
                   />
@@ -98,19 +84,11 @@ function ItemListPage() {
 
                 <td>
                   <div className="d-flex gap-2">
-                    <Link
-                      to={`/items/edit/${item.id}`}
-                      className="btn btn-warning btn-sm"
-                    >
+                    <Link to={`/items/edit/${item.id}`} className="btn btn-warning btn-sm">
                       Editar
                     </Link>
 
-                    <button
-                      className="btn btn-danger btn-sm"
-                      onClick={() =>
-                        handleDelete(item)
-                      }
-                    >
+                    <button className="btn btn-danger btn-sm" onClick={() => handleDelete(item)}>
                       Excluir
                     </button>
                   </div>

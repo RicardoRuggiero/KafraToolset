@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { npcService } from "../../services/npcService";
 import HomeButton from "../../components/HomeButton";
@@ -13,9 +12,7 @@ function NpcCreatePage() {
   const [job, setJob] = useState("");
   const [type, setType] = useState("");
 
-  const handleSubmit = async (
-    e: React.FormEvent
-  ) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!id.trim()) {
@@ -76,64 +73,21 @@ function NpcCreatePage() {
         <h2 className="frutiger-subtitle">Cadastro de NPC</h2>
 
         <form onSubmit={handleSubmit}>
+          <ValidatedInput label="ID" value={id} onChange={setId} errorMessage="Informe o ID." type="number" />
 
-          <ValidatedInput
-            label="ID"
-            value={id}
-            onChange={setId}
-            errorMessage="Informe o ID."
-            type="number"
-          />
+          <ValidatedInput label="Nome" value={name} onChange={setName} errorMessage="Informe o nome." />
 
-          <ValidatedInput
-            label="Nome"
-            value={name}
-            onChange={setName}
-            errorMessage="Informe o nome."
-          />
+          <ValidatedInput label="Mapname" value={mapname} onChange={setMapname} errorMessage="Informe o mapname." />
 
-          <ValidatedInput
-            label="Mapname"
-            value={mapname}
-            onChange={setMapname}
-            errorMessage="Informe o mapname."
-          />
+          <ValidatedInput label="X" value={x} onChange={setX} errorMessage="Informe a coordenada X." type="number" />
 
-          <ValidatedInput
-            label="X"
-            value={x}
-            onChange={setX}
-            errorMessage="Informe a coordenada X."
-            type="number"
-          />
+          <ValidatedInput label="Y" value={y} onChange={setY} errorMessage="Informe a coordenada Y." type="number" />
 
-          <ValidatedInput
-            label="Y"
-            value={y}
-            onChange={setY}
-            errorMessage="Informe a coordenada Y."
-            type="number"
-          />
+          <ValidatedInput label="Job" value={job} onChange={setJob} errorMessage="Informe o job." type="number" />
 
-          <ValidatedInput
-            label="Job"
-            value={job}
-            onChange={setJob}
-            errorMessage="Informe o job."
-            type="number"
-          />
+          <ValidatedInput label="Type" value={type} onChange={setType} errorMessage="Informe o type." />
 
-          <ValidatedInput
-            label="Type"
-            value={type}
-            onChange={setType}
-            errorMessage="Informe o type."
-          />
-
-          <button
-            type="submit"
-            className="btn frutiger-btn"
-          >
+          <button type="submit" className="btn frutiger-btn">
             Salvar
           </button>
         </form>

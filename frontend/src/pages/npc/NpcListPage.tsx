@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { npcService } from "../../services/npcService";
 import { soldbyService } from "../../services/soldbyService";
@@ -20,25 +19,18 @@ function NpcListPage() {
 
   const handleDelete = async (npc: Npc) => {
     try {
-      const dependencies: Soldby[] =
-        await soldbyService.getByNpc(npc.id);
+      const dependencies: Soldby[] = await soldbyService.getByNpc(npc.id);
 
-      let message =
-        `Deseja realmente excluir o NPC "${npc.name ?? "sem nome"}"?`;
+      let message = `Deseja realmente excluir o NPC "${npc.name ?? "sem nome"}"?`;
 
       if (dependencies.length > 0) {
-        message +=
-          `\n\nEste NPC está vinculado a ${dependencies.length} item(ns):\n`;
+        message += `\n\nEste NPC está vinculado a ${dependencies.length} item(ns):\n`;
 
         dependencies.forEach((relation) => {
-          message +=
-            `\n- ${relation.item?.name ?? "Item sem nome"} ` +
-            `(ID: ${relation.item?.id}) ` +
-            `por ${relation.price}z`;
+          message += `\n- ${relation.item?.name ?? "Item sem nome"} ` + `(ID: ${relation.item?.id}) ` + `por ${relation.price}z`;
         });
 
-        message +=
-          "\n\nAo confirmar, estes vínculos também serão removidos.";
+        message += "\n\nAo confirmar, estes vínculos também serão removidos.";
       }
 
       const confirmed = window.confirm(message);
@@ -54,9 +46,7 @@ function NpcListPage() {
 
       loadNpcs();
     } catch (error) {
-      alert(
-        "Erro ao excluir NPC. Verifique se você está logado."
-      );
+      alert("Erro ao excluir NPC. Verifique se você está logado.");
     }
   };
 
@@ -86,19 +76,11 @@ function NpcListPage() {
 
                 <td>
                   <div className="d-flex gap-2">
-                    <Link
-                      to={`/npcs/edit/${npc.id}`}
-                      className="btn btn-warning btn-sm"
-                    >
+                    <Link to={`/npcs/edit/${npc.id}`} className="btn btn-warning btn-sm">
                       Editar
                     </Link>
 
-                    <button
-                      className="btn btn-danger btn-sm"
-                      onClick={() =>
-                        handleDelete(npc)
-                      }
-                    >
+                    <button className="btn btn-danger btn-sm" onClick={() => handleDelete(npc)}>
                       Excluir
                     </button>
                   </div>

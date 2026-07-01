@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { itemService } from "../../services/itemService";
 import HomeButton from "../../components/HomeButton";
@@ -11,9 +10,7 @@ function ItemCreatePage() {
   const [weight, setWeight] = useState("");
   const [image, setImage] = useState<File | null>(null);
 
-  const handleSubmit = async (
-    e: React.FormEvent
-  ) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!id.trim()) {
@@ -60,60 +57,29 @@ function ItemCreatePage() {
         <h2 className="frutiger-subtitle">Cadastro de Item</h2>
 
         <form onSubmit={handleSubmit}>
+          <ValidatedInput label="ID" value={id} onChange={setId} errorMessage="Informe o ID." type="number" />
 
-          <ValidatedInput
-            label="ID"
-            value={id}
-            onChange={setId}
-            errorMessage="Informe o ID."
-            type="number"
-          />
+          <ValidatedInput label="Nome" value={name} onChange={setName} errorMessage="Informe o nome." />
 
-          <ValidatedInput
-            label="Nome"
-            value={name}
-            onChange={setName}
-            errorMessage="Informe o nome."
-          />
+          <ValidatedInput label="Descrição" value={description} onChange={setDescription} errorMessage="Informe a descrição." textarea />
 
-          <ValidatedInput
-            label="Descrição"
-            value={description}
-            onChange={setDescription}
-            errorMessage="Informe a descrição."
-            textarea
-          />
-
-          <ValidatedInput
-            label="Peso"
-            value={weight}
-            onChange={setWeight}
-            errorMessage="Informe o peso."
-            type="number"
-          />
+          <ValidatedInput label="Peso" value={weight} onChange={setWeight} errorMessage="Informe o peso." type="number" />
 
           <div className="mb-3">
-            <label className="form-label frutiger-label">
-              Imagem
-            </label>
+            <label className="form-label frutiger-label">Imagem</label>
 
             <input
               type="file"
               className="form-control frutiger-input"
               onChange={(e) => {
                 if (e.target.files?.length) {
-                  setImage(
-                    e.target.files[0]
-                  );
+                  setImage(e.target.files[0]);
                 }
               }}
             />
           </div>
 
-          <button
-            type="submit"
-            className="btn frutiger-btn"
-          >
+          <button type="submit" className="btn frutiger-btn">
             Salvar
           </button>
         </form>

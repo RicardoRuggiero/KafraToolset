@@ -1,22 +1,16 @@
-
 import { useState } from "react";
 import { authService } from "../../services/authService";
 import HomeButton from "../../components/HomeButton";
 import LoginValidatedInput from "../../components/LoginValidatedInput";
-
 import "../../style/validated-input.css";
-
 import { useAuth } from "../../contexts/AuthContext";
-
 
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const { login } = useAuth();
 
-  const handleSubmit = async (
-    e: React.FormEvent
-  ) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!email.trim()) {
@@ -29,18 +23,10 @@ function LoginPage() {
       return;
     }
 
-    const response = await authService.login({
-      email,
-      senha,
-    });
+    const response = await authService.login({ email, senha });
 
-    login(
-      response.token
-    );
-
-    alert(
-      "Login realizado com sucesso!"
-    );
+    login(response.token);
+    alert("Login realizado com sucesso!");
   };
 
   return (
@@ -51,27 +37,13 @@ function LoginPage() {
         <h2 className="frutiger-subtitle">Login</h2>
 
         <form onSubmit={handleSubmit}>
-
           <LoginValidatedInput
             label="Email"
             type="email"
             value={email}
             onChange={setEmail}
-            isInvalid={
-              (
-                email.trim() !== "" ||
-                senha.trim() !== ""
-              ) &&
-              (
-                email.trim() === "" ||
-                !email.includes("@")
-              )
-            }
-
-            isValid={
-              email.trim() !== "" &&
-              email.includes("@")
-            }
+            isInvalid={(email.trim() !== "" || senha.trim() !== "") && (email.trim() === "" || !email.includes("@"))}
+            isValid={email.trim() !== "" && email.includes("@")}
             errorMessage="Email inválido."
           />
 
@@ -80,20 +52,12 @@ function LoginPage() {
             type="password"
             value={senha}
             onChange={setSenha}
-            isInvalid={
-              email.trim() !== "" &&
-              senha.trim() === ""
-            }
-            isValid={
-              senha.trim() !== ""
-            }
+            isInvalid={email.trim() !== "" && senha.trim() === ""}
+            isValid={senha.trim() !== ""}
             errorMessage="Informe a senha."
           />
 
-          <button
-            type="submit"
-            className="btn frutiger-btn"
-          >
+          <button type="submit" className="btn frutiger-btn">
             Entrar
           </button>
         </form>

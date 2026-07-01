@@ -1,4 +1,3 @@
-
 import "../style/validated-input.css";
 
 interface Props {
@@ -11,20 +10,10 @@ interface Props {
   errorMessage: string;
 }
 
-function RegisterValidatedInput({
-  label,
-  type,
-  value,
-  onChange,
-  isValid,
-  isInvalid,
-  errorMessage,
-}: Props) {
+function RegisterValidatedInput({ label, type, value, onChange, isValid, isInvalid, errorMessage }: Props) {
   return (
     <div className="mb-3">
-      <label className="form-label frutiger-label">
-        {label}
-      </label>
+      <label className="form-label frutiger-label">{label}</label>
 
       <input
         type={type}
@@ -36,16 +25,10 @@ function RegisterValidatedInput({
               : "form-control frutiger-input"
         }
         value={value}
-        onChange={(e) =>
-          onChange(e.target.value)
-        }
+        onChange={(e) => onChange(e.target.value)}
       />
 
-      {isInvalid && (
-        <div className="validated-input-message">
-          {errorMessage}
-        </div>
-      )}
+      {isInvalid && <div className="validated-input-message">{errorMessage}</div>}
     </div>
   );
 }

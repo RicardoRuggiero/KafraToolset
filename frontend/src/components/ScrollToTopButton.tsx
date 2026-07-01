@@ -1,31 +1,21 @@
-
 import { useEffect, useState } from "react";
 
 import "../style/scroll-to-top.css";
 
 function ScrollToTopButton() {
-  const [enabled, setEnabled] =
-    useState(false);
+  const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setEnabled(
-        window.scrollY > 0
-      );
+      setEnabled(window.scrollY > 0);
     };
 
-    window.addEventListener(
-      "scroll",
-      handleScroll
-    );
+    window.addEventListener("scroll", handleScroll);
 
     handleScroll();
 
     return () => {
-      window.removeEventListener(
-        "scroll",
-        handleScroll
-      );
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -41,14 +31,7 @@ function ScrollToTopButton() {
   };
 
   return (
-    <button
-      className={
-        enabled
-          ? "scroll-top-button enabled"
-          : "scroll-top-button disabled"
-      }
-      onClick={handleClick}
-    >
+    <button className={enabled ? "scroll-top-button enabled" : "scroll-top-button disabled"} onClick={handleClick}>
       ↑
     </button>
   );
