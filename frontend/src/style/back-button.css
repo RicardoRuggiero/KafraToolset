@@ -1,3 +1,22 @@
+/*
+// ============================================================================
+// KafraToolset - Frontend
+// ============================================================================
+// Copyright (c) 2026 Ricardo RO - EOS
+//
+// Folha de estilos responsável por definir aparência, layout,
+// comportamento visual e experiência de uso dos componentes e
+// páginas da aplicação, mantendo consistência visual e
+// organização do tema do projeto.
+//
+// File: src/style/back-button.css
+//
+// Purpose: Estilizar o botão flutuante de navegação para
+// retorno à página anterior, incluindo estados ativos,
+// desabilitados e animações visuais.
+// ============================================================================
+*/
+
 .back-button {
   position: fixed;
 

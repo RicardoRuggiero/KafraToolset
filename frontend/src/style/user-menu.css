@@ -1,3 +1,20 @@
+/*
+// ============================================================================
+// KafraToolset - Frontend
+// ============================================================================
+// Copyright (c) 2026 Ricardo RO - EOS
+//
+// Folha de estilos responsável por definir aparência, layout,
+// comportamento visual e experiência de uso dos componentes e
+// páginas da aplicação, mantendo consistência visual e
+// organização do tema do projeto.
+//
+// File: src/style/user-menu.css
+//
+// Purpose: Definir o layout e aparência do menu do usuário autenticado,
+// incluindo avatar, informações da conta e opções disponíveis no dropdown.
+// ============================================================================
+*/
 .user-menu-container {
   position: relative;
   display: inline-block;
