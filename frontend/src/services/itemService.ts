@@ -1,3 +1,18 @@
+// ============================================================================
+// KafraToolset - Frontend
+// ============================================================================
+// Copyright (c) 2026 Ricardo RO - EOS
+//
+// Camada responsável pela comunicação entre o frontend e a API REST do
+// backend, encapsulando requisições HTTP, tratamento de respostas e
+// regras de acesso aos recursos da aplicação.
+//
+// File: src/services/itemService.ts
+//
+// Purpose: Executar operações CRUD e comunicação com os endpoints
+// da entidade Item da API.
+// ============================================================================
+
 import api from "./api";
 import type { Item } from "../types/Item";
 

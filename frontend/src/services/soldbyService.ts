@@ -1,3 +1,18 @@
+// ============================================================================
+// KafraToolset - Frontend
+// ============================================================================
+// Copyright (c) 2026 Ricardo RO - EOS
+//
+// Camada responsável pela comunicação entre o frontend e a API REST do
+// backend, encapsulando requisições HTTP, tratamento de respostas e
+// regras de acesso aos recursos da aplicação.
+//
+// File: src/services/soldbyService.ts
+//
+// Purpose: Gerenciar operações relacionadas à associação entre
+// Itens e NPCs, incluindo vínculos, consultas e remoções.
+// ============================================================================
+
 import api from "./api";
 import type { Soldby } from "../types/Soldby";
 
