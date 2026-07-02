@@ -1,3 +1,18 @@
+// ============================================================================
+// KafraToolset - Frontend
+// ============================================================================
+// Copyright (c) 2026 Ricardo RO - EOS
+//
+// Página da aplicação responsável por apresentar uma funcionalidade
+// específica ao usuário, integrando componentes visuais, gerenciamento de
+// estado, navegação e comunicação com os serviços da API.
+//
+// File: src/pages/soldby/SoldbyCreatePage.tsx
+//
+// Purpose: Permitir a criação e gerenciamento da relação comercial entre
+// NPCs e itens, incluindo definição de preços de venda.
+// ============================================================================
+
 import { useEffect, useState } from "react";
 import { soldbyService } from "../../services/soldbyService";
 import { itemService } from "../../services/itemService";

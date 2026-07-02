@@ -1,3 +1,18 @@
+// ============================================================================
+// KafraToolset - Frontend
+// ============================================================================
+// Copyright (c) 2026 Ricardo RO - EOS
+//
+// Página da aplicação responsável por apresentar uma funcionalidade
+// específica ao usuário, integrando componentes visuais, gerenciamento de
+// estado, navegação e comunicação com os serviços da API.
+//
+// File: src/pages/item/ItemCreatePage.tsx
+//
+// Purpose: Permitir o cadastro de novos itens, incluindo
+// upload de imagem e envio dos dados à API.
+// ============================================================================
+
 import { useState } from "react";
 import { itemService } from "../../services/itemService";
 import HomeButton from "../../components/HomeButton";

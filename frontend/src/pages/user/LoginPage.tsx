@@ -1,3 +1,18 @@
+// ============================================================================
+// KafraToolset - Frontend
+// ============================================================================
+// Copyright (c) 2026 Ricardo RO - EOS
+//
+// Página da aplicação responsável por apresentar uma funcionalidade
+// específica ao usuário, integrando componentes visuais, gerenciamento de
+// estado, navegação e comunicação com os serviços da API.
+//
+// File: src/pages/user/LoginPage.tsx
+//
+// Purpose: Permitir autenticação de usuários e
+// inicialização da sessão utilizando JWT.
+// ============================================================================
+
 import { useState } from "react";
 import { authService } from "../../services/authService";
 import HomeButton from "../../components/HomeButton";

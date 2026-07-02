@@ -1,3 +1,18 @@
+// ============================================================================
+// KafraToolset - Frontend
+// ============================================================================
+// Copyright (c) 2026 Ricardo RO - EOS
+//
+// Página da aplicação responsável por apresentar uma funcionalidade
+// específica ao usuário, integrando componentes visuais, gerenciamento de
+// estado, navegação e comunicação com os serviços da API.
+//
+// File: src/pages/user/RegisterPage.tsx
+//
+// Purpose: Permitir o cadastro de novos usuários e
+// envio das credenciais ao backend.
+// ============================================================================
+
 import { useState } from "react";
 import { authService } from "../../services/authService";
 import RegisterValidatedInput from "../../components/RegisterValidatedInput";

@@ -1,3 +1,18 @@
+// ============================================================================
+// KafraToolset - Frontend
+// ============================================================================
+// Copyright (c) 2026 Ricardo RO - EOS
+//
+// Componente reutilizável da interface responsável por encapsular
+// comportamentos e elementos visuais da aplicação, promovendo 
+// reutilização, organização e padronização do frontend.
+//
+// File: src/components/ValidatedInput.tsx
+//
+// Purpose: Fornecer um campo reutilizável com validação visual em
+// tempo real para formulários da aplicação.
+// ============================================================================
+
 import { useState } from "react";
 import "../style/validated-input.css";
 

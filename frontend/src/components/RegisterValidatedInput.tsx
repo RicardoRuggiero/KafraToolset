@@ -1,3 +1,18 @@
+// ============================================================================
+// KafraToolset - Frontend
+// ============================================================================
+// Copyright (c) 2026 Ricardo RO - EOS
+//
+// Componente reutilizável da interface responsável por encapsular
+// comportamentos e elementos visuais da aplicação, promovendo 
+// reutilização, organização e padronização do frontend.
+//
+// File: src/components/RegisterValidatedInput.tsx
+//
+// Purpose: Centralizar validações visuais e comportamentais
+// específicas do formulário de cadastro de usuários.
+// ============================================================================
+
 import "../style/validated-input.css";
 
 interface Props {

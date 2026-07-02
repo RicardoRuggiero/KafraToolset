@@ -1,3 +1,19 @@
+// ============================================================================
+// KafraToolset - Frontend
+// ============================================================================
+// Copyright (c) 2026 Ricardo RO - EOS
+//
+// Contexto global responsável pelo gerenciamento do estado de
+// autenticação da aplicação, centralizando informações da
+// sessão do usuário e compartilhando-as entre os componentes do frontend.
+//
+// File: src/contexts/AuthContext.tsx
+//
+// Purpose: Gerenciar login, logout, armazenamento do token JWT,
+// identificação do usuário autenticado e disponibilização do
+// estado global de autenticação para toda a aplicação.
+// ============================================================================
+
 import { createContext, useContext, useState } from "react";
 import type { ReactNode } from "react";
 

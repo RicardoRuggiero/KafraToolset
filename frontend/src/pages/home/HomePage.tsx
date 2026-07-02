@@ -1,3 +1,18 @@
+// ============================================================================
+// KafraToolset - Frontend
+// ============================================================================
+// Copyright (c) 2026 Ricardo RO - EOS
+//
+// Página da aplicação responsável por apresentar uma funcionalidade
+// específica ao usuário, integrando componentes visuais, gerenciamento de
+// estado, navegação e comunicação com os serviços da API.
+//
+// File: src/pages/home/Homepage.tsx
+//
+// Purpose: Apresentar o menu principal e centralizar o
+// acesso às funcionalidades disponíveis da aplicação.
+// ============================================================================
+
 import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import UserMenu from "../../components/UserMenu";

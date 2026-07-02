@@ -1,3 +1,18 @@
+// ============================================================================
+// KafraToolset - Frontend
+// ============================================================================
+// Copyright (c) 2026 Ricardo RO - EOS
+//
+// Componente reutilizável da interface responsável por encapsular
+// comportamentos e elementos visuais da aplicação, promovendo 
+// reutilização, organização e padronização do frontend.
+//
+// File: src/components/UserMenu.tsx
+//
+// Purpose: Exibir informações do usuário autenticado e
+// disponibilizar ações relacionadas à sessão atual.
+// ============================================================================
+
 import { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 

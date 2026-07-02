@@ -1,3 +1,17 @@
+// ============================================================================
+// KafraToolset - Frontend
+// ============================================================================
+// Copyright (c) 2026 Ricardo RO - EOS
+//
+// Página da aplicação responsável por apresentar uma funcionalidade
+// específica ao usuário, integrando componentes visuais, gerenciamento de
+// estado, navegação e comunicação com os serviços da API.
+//
+// File: src/pages/npc/NpcCreatePage.tsx
+//
+// Purpose: Permitir o cadastro de novos NPCs e envio dos dados à API.
+// ============================================================================
+
 import { useState } from "react";
 import { npcService } from "../../services/npcService";
 import HomeButton from "../../components/HomeButton";
