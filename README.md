@@ -1,4 +1,4 @@
-# KafraToolset - DatabaseRO
+# KafraToolset - DB RO
 
 Aplicação fullstack desenvolvida para gerenciamento de dados inspirados no universo de RO, com foco em itens, NPCs e suas relações de venda.
 
